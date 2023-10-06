@@ -1,0 +1,54 @@
+<header class="header">
+    <div class="container flex flex-sbc">
+        {{#link href=@site.url class="header__brand"}}
+            {{#if @site.logo}}
+                {{!-- Site logo --}}
+                {{> image
+                image_type="site"
+                image_class="header__logo"
+                image_url=@site.logo
+                size_s=true
+                loading="eager"
+                }}
+            {{else}}
+                {{!-- Site Title --}}
+                <span class="header__title ">{{@site.title}}</span>
+            {{/if}}
+        {{/link}}
+
+         {{!-- Menu --}}
+        <nav class="header__menu flex">
+            {{!-- Main navigation --}}
+            {{navigation}}
+        </nav>
+
+        <div class="header__buttons flex flex-sbc">
+            {{!-- Native Search --}}
+            <button class="header-search__toggle" data-ghost-search title="{{t "Search"}}" aria-label="{{t "Search"}}">
+                {{> icons/search}}
+            </button>
+
+            {{!-- Sign in Button --}}
+            {{#if @site.members_enabled}}
+            {{#if @member.paid}}
+            {{else if @member}}
+                {{!-- nothing --}}
+            {{else}}
+                <a href="/signin/" class="button signin-link">{{t "Subscribe"}}</a>
+            {{/if}}
+            {{/if}}
+
+            {{!-- Member--}}
+            {{#if member}}
+                {{#link href=@site.url class="header__user"}}
+                {{#if @member}}
+                    <img class="header__user-avatar" 
+                        src="{{@member.avatar_image}}"
+                        alt="{{@member.name}}">
+                    {{/if}}
+                    {{>icon name="user" size="md"}}
+                {{/link}}
+            {{/if}}
+        </div>
+    </div>
+</header>

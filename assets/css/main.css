@@ -1,0 +1,164 @@
+/* ===================================================== 1. Colors */
+/* ===================================================== 2. Fonts */
+body {
+  font-family: "Bricolage Grotesque", sans-serif;
+}
+
+.header {
+  background: #F6F6F6;
+}
+.header__brand {
+  height: 5rem;
+}
+.header__logo {
+  height: 100%;
+}
+.container {
+  padding: 3rem 0;
+}
+
+.header-search__toggle {
+  transition: all 0.3s;
+}
+.header-search__toggle:hover {
+  transform: scale(0.9);
+}
+
+.signin-link {
+  margin-left: 2rem;
+}
+
+.nav li {
+  position: relative;
+}
+.nav li:not(:last-child) {
+  margin-right: 6rem;
+}
+.nav li::after {
+  position: absolute;
+  content: "";
+  bottom: -0.5rem;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #171717;
+  transition: all 0.3s;
+}
+.nav li:hover::after {
+  width: 100%;
+}
+.nav a {
+  color: #171717;
+  font-size: 2rem;
+  font-weight: 400;
+}
+
+.button {
+  padding: 1.2rem 2.4rem;
+  border-radius: 2rem;
+  background-color: #292929;
+  color: #fff;
+  border: 1px solid transparent;
+  transition: all 0.3s;
+}
+.button:hover {
+  background-color: #fff;
+  border-color: #838383;
+  color: #171717;
+}
+.button:active {
+  transform: scale(0.9);
+}
+
+.container {
+  max-width: 1240px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+.flex {
+  display: flex;
+}
+.flex-inline {
+  display: inline-flex;
+}
+.flex-wrap {
+  flex-wrap: wrap;
+}
+.flex-col {
+  flex-direction: column;
+}
+.flex-row {
+  flex-direction: row;
+}
+.flex-1 {
+  flex: 1;
+}
+.flex-0 {
+  flex: 0;
+}
+.flex-cc {
+  justify-content: center;
+  align-items: center;
+}
+.flex-sbc {
+  justify-content: space-between;
+  align-items: center;
+}
+
+.content-start {
+  justify-content: flex-start;
+}
+.content-center {
+  justify-content: center;
+}
+.content-end {
+  justify-content: flex-end;
+}
+
+.items-start {
+  align-items: flex-start;
+}
+.items-center {
+  align-items: center;
+}
+.items-end {
+  align-items: flex-end;
+}
+
+.self-justify-start {
+  justify-self: flex-start;
+}
+.self-justify-center {
+  justify-self: center;
+}
+.self-justify-end {
+  justify-self: flex-end;
+}
+
+.self-align-start {
+  align-self: flex-start;
+}
+.self-align-center {
+  align-self: center;
+}
+.self-align-end {
+  align-self: flex-end;
+}
