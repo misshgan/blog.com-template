@@ -1,9 +1,14 @@
 @import 'base';
 
+@import 'utilities/colors';
+@import 'utilities/typo';
+@import 'utilities/utilities';
+@import 'utilities/flex';
+
 @import 'components/header';
 @import 'components/navigation';
 @import 'components/buttons';
+@import 'components/big-image-cta';
 
-@import 'utilities/colors';
-@import 'utilities/utilities';
-@import 'utilities/flex';
+@import 'structure/hero';
+

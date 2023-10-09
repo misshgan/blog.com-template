@@ -1,0 +1,20 @@
+.big-img-cta {
+    position: relative;
+
+    &__img {
+    }
+    &__link {
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 22.5%;
+        height: 9.75%;
+
+        font-size: 2.4rem;
+
+        padding: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}

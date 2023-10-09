@@ -1,0 +1,12 @@
+$main-font-family: 'Bricolage Grotesque', sans-serif;
+$main-font-color: $color-full-black;
+
+body {
+    font-family: $main-font-family;
+    color: $main-font-color;
+}
+
+.heading-1 {
+    font-size: 6rem;
+    font-weight: 400;
+}

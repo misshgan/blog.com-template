@@ -19,5 +19,15 @@ button {
 }
 
 html {
-    font-size: 62.5%;
+    font-size: 62.5% !important;
+}
+
+.tag {
+    padding: 1.2rem 2rem;
+    border-radius: 2rem;
+    border: 1px solid $color-full-black;
+    color: $color-full-black;
+    line-height: 0.75;
+
+    display: inline-block;
 }

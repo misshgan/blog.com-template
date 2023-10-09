@@ -71,6 +71,15 @@
             "xl": {
                 "width": 2000
             }
+        },
+        "custom": {
+            "hero_cta_background_image": {
+                "type": "image"
+            },
+            "show_categories_below_hero_cta_section": {
+                "type": "boolean",
+                "default": true
+            }
         }
     },
     "type": "module",

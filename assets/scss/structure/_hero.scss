@@ -1,0 +1,14 @@
+.hero {
+    padding-top: 10.5rem;
+
+    &__title {
+        max-width: 84rem;
+        margin-bottom: 2rem;
+    }
+
+    &__tags {
+        margin-top: 2rem;
+        gap: 1.6rem;
+        flex-wrap: wrap;
+    }
+}

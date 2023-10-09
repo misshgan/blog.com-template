@@ -1,0 +1,23 @@
+{{!< default}}
+
+<div class="container">
+
+    <section class="hero">
+        {{#if @site.description}}
+            <h1 class="heading-1 hero__title">{{@site.description}}</h1>
+        {{/if}}
+
+        {{> big-image-cta classes="hero__cta"}}
+
+        {{#if @custom.show_categories_below_hero_cta_section}}
+            <ul class="hero__tags flex">
+                {{#get "tags"}}
+                    {{#foreach tags}}
+                      <li class="hero__tag">{{> tag-icon}}</li>
+                    {{/foreach}}
+                {{/get}}
+            </ul>
+        {{/if}}
+    </section>
+
+</div>

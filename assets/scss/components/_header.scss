@@ -14,10 +14,12 @@
     &__buttons {
     }
     &__user-avatar {}
+
+    .container {
+      padding: 3rem 0;
+    }
   }
-  .container {
-    padding: 3rem 0;
-  }
+  
   .btn {
   }
   .header-search {
@@ -32,4 +34,3 @@
   .signin-link {
     margin-left: 2rem;
   }
-  
