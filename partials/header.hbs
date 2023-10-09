@@ -5,10 +5,10 @@
                 {{!-- Site logo --}}
                 {{> image
                 image_type="site"
-                image_class="header__logo"
+                image_class="lazyload header__logo"
                 image_url=@site.logo
                 size_s=true
-                loading="eager"
+                loading="lazy"
                 }}
             {{else}}
                 {{!-- Site Title --}}

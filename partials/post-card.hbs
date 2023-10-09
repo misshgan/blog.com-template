@@ -1,0 +1,37 @@
+<article class="post-card flex flex-col {{classes}}">
+    {{#if feature_image}}
+        <div class="post-card__img">
+            {{> image
+                image_type="post"
+                image_class="lazyload"
+                image_url=feature_image
+                size_m=true
+                size_s=true
+                loading="lazy"
+            }}
+        </div>
+    {{/if}}
+    <ul class="post-card__tags flex items-center">
+        {{#if featured}}
+            <li class="post-card__tag tag-featured flex flex-cc">{{> icons/yellow-star}}</li>
+        {{/if}}
+        {{#foreach tags}}
+            <li class="post-card__tag">{{> tag-icon}}</li>
+        {{/foreach}}
+    </ul>
+    {{#match classes "=" 'width-half'}}
+        <h3 class="post-card__title heading-3">{{title}}</h3>
+    {{else}}
+        <h4 class="post-card__title heading-4">{{title}}</h4>
+    {{/match}}
+    {{#if excerpt}}
+        <p class="post-card__excerpt">{{excerpt}}</p>
+    {{/if}}
+    <div class="post-card__footer flex items-center">
+        <time class="post-card__date" datetime="{{ date published_at }}">{{ date published_at }}</time>
+        {{#if reading_time}}
+            <p class="post-card__reading-time"> | {{reading_time}}</p>
+        {{/if}}
+    </div>
+    <h1>{{test}}</h1>
+</article>

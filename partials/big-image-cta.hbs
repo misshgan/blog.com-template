@@ -1,7 +1,13 @@
 <article class="big-img-cta {{classes}}">
     {{#if @member}}
         <div class="big-img-cta__img">
-            <img src="{{@custom.hero_cta_background_image}}" alt="{{@site.title}} subscribe form background">
+            {{> image
+                image_type="site"
+                image_class="lazyload"
+                image_url=@custom.hero_cta_background_image
+                size_l=true
+                loading="lazy"
+            }}
         </div>
     {{else}}
         <a href="#" class="button big-img-cta__link">{{t "Subscribe"}}</a>
