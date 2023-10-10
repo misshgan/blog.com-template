@@ -1,11 +1,10 @@
-<a href="{{url}}" class="tag {{#if accent_color}}colorful{{/if}}">{{name}}</a>
+<a href="{{url}}" class="tag tag-{{slug}} {{#if accent_color}}colorful{{/if}}">{{name}}</a>
 
 {{#if accent_color}}
     <style>
-        .tag.colorful {
+        .tag-{{slug}}.colorful {
+            background: {{accent_color}}0D;
             color: {{accent_color}};
-            border-color: transparent;
-            background: {{accent_color}}14;
         }
     </style>
 {{/if}}
