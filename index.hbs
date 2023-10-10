@@ -3,4 +3,12 @@
 
 {{> home/hero}}
 
-{{> loop filter="featured:true" classes="featured" title="Featured"}}
+{{> loop-2-col filter="featured:true" classes="featured" title="Featured"}}
+
+{{#if @custom.enter_tag_to_display_publications_on_the_home_page}}
+    {{#get "tags" filter="slug:[{{@custom.enter_tag_to_display_publications_on_the_home_page}}]"}}
+        {{#foreach tags}}
+            {{> loop-2-col filter="tag:{{slug}}" classes=slug title=name}}
+        {{/foreach}}
+    {{/get}}
+{{/if}}

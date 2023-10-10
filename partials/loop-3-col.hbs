@@ -1,0 +1,15 @@
+<section class="cards-loop mr-big-b {{classes}}">
+    <div class="container">
+        {{#if title}}
+            <h2 class="cards-loop__title mr-md-b heading-2">{{t title}}</h2>
+        {{/if}}
+        
+        <div class="cards-loop__cards flex">
+            {{#get "posts" include="tags" filter=filter}}
+                {{#foreach posts}}
+                    {{> post-card classes="width-third"}}
+                {{/foreach}}
+            {{/get}}
+        </div>
+    </div>
+</section>

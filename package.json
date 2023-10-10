@@ -79,6 +79,10 @@
             "show_categories_below_hero_cta_section": {
                 "type": "boolean",
                 "default": true
+            },
+            "enter_tag_to_display_publications_on_the_home_page": {
+                "type": "text",
+                "group": "homepage"
             }
         }
     },
