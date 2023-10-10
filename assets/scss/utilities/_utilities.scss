@@ -9,6 +9,26 @@ a {
     text-decoration: none;
 }
 
+a.link {
+    background: linear-gradient(to right, #fff, #fff),
+        linear-gradient(to right, $color-full-black, $color-full-black);
+    background-size:
+        100% 0.075em,
+        0 0.075em;
+    background-position:
+        100% 100%,
+        0 100%;
+    background-repeat: no-repeat;
+    transition: background-size .3s;
+
+    &:hover,
+    &:focus {
+        background-size:
+            0 0.075em,
+            100% 0.075em;
+    }
+}
+
 button {
     background-color: transparent;
     border: none;

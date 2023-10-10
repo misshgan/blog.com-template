@@ -1,6 +1,6 @@
 <article class="post-card flex flex-col {{classes}}">
     {{#if feature_image}}
-        <div class="post-card__img">
+        <a href="{{url}}" class="post-card__img">
             {{> image
                 image_type="post"
                 image_class="lazyload"
@@ -9,7 +9,7 @@
                 size_m=true
                 loading="lazy"
             }}
-        </div>
+        </a>
     {{/if}}
     <ul class="post-card__tags flex items-center">
         {{#if featured}}
@@ -20,9 +20,9 @@
         {{/foreach}}
     </ul>
     {{#match classes "=" 'width-half'}}
-        <h3 class="post-card__title heading-3">{{title}}</h3>
+        <h3 class="post-card__title heading-3"><a class="link" href="{{url}}">{{title}}</a></h3>
     {{else}}
-        <h4 class="post-card__title heading-4">{{title}}</h4>
+        <h4 class="post-card__title heading-4"><a class="link" href="{{url}}">{{title}}</a></h4>
     {{/match}}
     {{#if excerpt}}
         <p class="post-card__excerpt">{{excerpt}}</p>

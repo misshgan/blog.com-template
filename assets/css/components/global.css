@@ -121,11 +121,6 @@ ul:not([class]) li + li {
     margin-top: 0.6em;
 }
 
-a:not([class]) {
-    color: var(--color-primary);
-    text-decoration-skip-ink: auto;
-}
-
 h1,
 h2,
 h3,

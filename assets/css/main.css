@@ -1,4 +1,4 @@
-body {
+body, a {
   font-family: "Bricolage Grotesque", sans-serif;
   color: #171717;
 }
@@ -36,6 +36,17 @@ h4.heading-4 {
 
 a {
   text-decoration: none;
+}
+
+a.link {
+  background: linear-gradient(to right, #fff, #fff), linear-gradient(to right, #171717, #171717);
+  background-size: 100% 0.075em, 0 0.075em;
+  background-position: 100% 100%, 0 100%;
+  background-repeat: no-repeat;
+  transition: background-size 0.3s;
+}
+a.link:hover, a.link:focus {
+  background-size: 0 0.075em, 100% 0.075em;
 }
 
 button {
@@ -274,6 +285,9 @@ html {
 .post-card__img {
   border-radius: 2rem;
   overflow: hidden;
+}
+.post-card__img:hover img {
+  transform: scale(1.05);
 }
 .post-card__img img {
   width: 100%;
