@@ -1,6 +1,10 @@
-<article class="cta {{#if margin-bottom}} mr-big-b {{/if}}{{#if margin-top}} mr-big-t {{/if}}">
-    <div class="container flex flex-col items-center">
-        <h2 class="cta__title heading-2">{{@custom.CTA_section_title}}</h2>
+<article class="cta {{classes}}{{#if margin-bottom}} mr-big-b {{/if}}{{#if margin-top}} mr-big-t {{/if}}">
+    <div class="container flex flex-col {{^match classes '=' 'cta_footer'}} items-center {{/match}}">
+        {{#match classes "=" 'cta_footer'}}
+            <h4 class="cta__title heading-4">{{@custom.CTA_section_title}}</h4>
+        {{else}}
+            <h2 class="cta__title heading-2">{{@custom.CTA_section_title}}</h2>
+        {{/match}}
         <form action="#" class="cta__form flex items-center">
             <input class="cta__form-input" placeholder="Your e-mail@gmail.com" type="email">
             <button class="cta__form-button button">{{@custom.CTA_section_button_text}}</button>

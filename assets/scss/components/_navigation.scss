@@ -30,3 +30,38 @@
         font-weight: 400;
     }
 }
+
+.nav.footer__nav {
+    width: max-content;
+
+    li {
+        position: relative;
+        margin-right: 0;
+
+        &:not(:last-child) {
+            margin-bottom: 1.5rem;
+        }
+
+        &::after {
+            position: absolute;
+            content: "";
+            bottom: -.5rem;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: $text-color-main;
+
+            transition: all .3s;
+        }
+
+        &:hover::after {
+            width: 100%;
+        }   
+    }
+
+    a {
+        color: $text-color-main;
+        font-size: 2rem;
+        font-weight: 400;
+    }
+}

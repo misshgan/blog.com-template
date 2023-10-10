@@ -8,18 +8,19 @@
                 image_class="lazyload header__logo"
                 image_url=@site.logo
                 size_s=true
+                size_m=true
                 loading="lazy"
                 }}
             {{else}}
                 {{!-- Site Title --}}
-                <span class="header__title ">{{@site.title}}</span>
+                <span class="header__title">{{@site.title}}</span>
             {{/if}}
         {{/link}}
 
          {{!-- Menu --}}
         <nav class="header__menu flex">
             {{!-- Main navigation --}}
-            {{navigation}}
+            {{navigation classes="flex flex-sbc"}}
         </nav>
 
         <div class="header__buttons flex flex-sbc">
@@ -34,7 +35,7 @@
             {{else if @member}}
                 {{!-- nothing --}}
             {{else}}
-                <a href="/signin/" class="button signin-link">{{t "Subscribe"}}</a>
+                <a href="/signin/" class="button signin-link">{{t "Sign in"}}</a>
             {{/if}}
             {{/if}}
 
