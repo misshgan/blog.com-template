@@ -10,13 +10,7 @@
         {{> big-image-cta classes="hero__cta"}}
 
         {{#if @custom.show_categories_below_hero_cta_section}}
-            <ul class="hero__tags flex">
-                {{#get "tags"}}
-                    {{#foreach tags}}
-                      <li class="hero__tag">{{> tag-icon}}</li>
-                    {{/foreach}}
-                {{/get}}
-            </ul>
+            {{> tags-loop classes="size-l hero__tags" outside=true}}
         {{/if}}
     </section>
 

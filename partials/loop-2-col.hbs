@@ -4,12 +4,12 @@
             <h2 class="cards-loop__title mr-md-b heading-2">{{t title}}</h2>
         {{/if}}
         
-        <div class="cards-loop__cards flex">
+        <ul class="cards-loop__cards flex">
             {{#get "posts" include="tags" filter=filter}}
                 {{#foreach posts}}
                     {{> post-card classes="width-half"}}
                 {{/foreach}}
             {{/get}}
-        </div>
+        </ul>
     </div>
 </section>

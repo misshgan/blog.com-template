@@ -1,3 +1,13 @@
+.post-card-wrapper {
+    list-style-type: none;
+
+    &.width-half {
+        width: 49%;
+    }
+    &.width-third {
+        width: 32%;
+    }
+}
 .post-card {
     padding-bottom: 1rem;
 
@@ -34,8 +44,7 @@
     }
 }
 
-.post-card.width-half {
-    width: 49%;
+.post-card-wrapper.width-half .post-card {
 
     .post-card__img {
         height: 50rem;
@@ -64,8 +73,7 @@
     }
 }
 
-.post-card.width-third {
-    width: 32%;
+.post-card-wrapper.width-third .post-card{
 
     .post-card__img {
         height: 45rem;

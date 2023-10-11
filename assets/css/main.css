@@ -62,31 +62,6 @@ html {
   font-size: 62.5% !important;
 }
 
-.tag {
-  padding: 1.2rem 2rem;
-  border-radius: 2rem;
-  background: rgba(23, 23, 23, 0.05);
-  box-shadow: 0px 2px 8px 0px rgba(61, 61, 61, 0.1);
-  color: #171717;
-  line-height: normal;
-  font-weight: 400;
-  font-size: 2rem;
-  display: inline-block;
-  transition: all 0.3s;
-}
-.tag:hover {
-  box-shadow: 0px 2px 8px 0px rgba(61, 61, 61, 0.2);
-  transform: scale(1.01);
-}
-
-.tag-featured {
-  border-radius: 1rem;
-  background: #fff6ed;
-  box-shadow: 0px 2px 8px 0px rgba(61, 61, 61, 0.1);
-  width: 4.75rem;
-  height: 4.75rem;
-}
-
 .mr-big-t {
   margin-top: 17rem;
 }
@@ -293,6 +268,16 @@ html {
   justify-content: center;
 }
 
+.post-card-wrapper {
+  list-style-type: none;
+}
+.post-card-wrapper.width-half {
+  width: 49%;
+}
+.post-card-wrapper.width-third {
+  width: 32%;
+}
+
 .post-card {
   padding-bottom: 1rem;
 }
@@ -315,40 +300,34 @@ html {
 .post-card__title {
   margin-bottom: 1rem;
 }
-.post-card.width-half {
-  width: 49%;
-}
-.post-card.width-half .post-card__img {
+.post-card-wrapper.width-half .post-card .post-card__img {
   height: 50rem;
 }
-.post-card.width-half .post-card__tags {
+.post-card-wrapper.width-half .post-card .post-card__tags {
   margin: 3rem 0 2rem;
 }
-.post-card.width-half .post-card__excerpt {
+.post-card-wrapper.width-half .post-card .post-card__excerpt {
   font-size: 2.4rem;
   font-weight: 300;
   opacity: 0.9;
 }
-.post-card.width-half .post-card__footer {
+.post-card-wrapper.width-half .post-card .post-card__footer {
   margin-top: 3rem;
   font-size: 2rem;
   font-weight: 300;
 }
-.post-card.width-third {
-  width: 32%;
-}
-.post-card.width-third .post-card__img {
+.post-card-wrapper.width-third .post-card .post-card__img {
   height: 45rem;
 }
-.post-card.width-third .post-card__tags {
+.post-card-wrapper.width-third .post-card .post-card__tags {
   margin: 2rem 0 1.5rem;
 }
-.post-card.width-third .post-card__excerpt {
+.post-card-wrapper.width-third .post-card .post-card__excerpt {
   font-size: 2rem;
   font-weight: 300;
   opacity: 0.9;
 }
-.post-card.width-third .post-card__footer {
+.post-card-wrapper.width-third .post-card .post-card__footer {
   margin-top: 2rem;
   font-size: 1.6rem;
   font-weight: 300;
@@ -356,6 +335,87 @@ html {
 .cards-loop__cards {
   -moz-column-gap: 2%;
        column-gap: 2%;
+}
+
+.tags-loop {
+  flex-wrap: wrap;
+}
+.tags-loop .tag {
+  border-radius: 2rem;
+  background: rgba(23, 23, 23, 0.05);
+  box-shadow: 0px 2px 8px 0px rgba(61, 61, 61, 0.1);
+  color: #171717;
+  font-weight: 400;
+  display: inline-block;
+  transition: all 0.3s;
+}
+.tags-loop .tag:hover {
+  box-shadow: 0px 2px 8px 0px rgba(61, 61, 61, 0.2);
+  transform: scale(1.01);
+}
+.tags-loop .tag-featured {
+  border-radius: 1rem;
+  background: #fff6ed;
+  box-shadow: 0px 2px 8px 0px rgba(61, 61, 61, 0.1);
+}
+.tags-loop.size-l .tag {
+  padding: 1.2rem 2rem;
+  font-size: 2rem;
+  font-weight: 700;
+}
+.tags-loop.size-m .tag {
+  padding: 0.8rem 1.4rem;
+  font-size: 2rem;
+}
+.tags-loop.size-m .tag-featured {
+  width: 4rem;
+  height: 4rem;
+}
+.tags-loop.size-s .tag {
+  font-size: 1.6rem;
+  padding: 0.6rem 1.2rem;
+}
+.tags-loop.size-s .tag-featured {
+  height: 3.5rem;
+  width: 3.5rem;
+}
+
+.tags-loop.categories__cards {
+  -moz-column-gap: 2%;
+       column-gap: 2%;
+  row-gap: 7rem;
+}
+.tags-loop.categories__cards li {
+  width: 23.5%;
+}
+.tags-loop.categories__cards li div {
+  margin-bottom: 1rem;
+  border-radius: 2rem;
+  height: 18rem;
+  overflow: hidden;
+  transition: all 0.3s;
+}
+.tags-loop.categories__cards li:hover div {
+  box-shadow: 0px 2px 8px 0px rgba(61, 61, 61, 0.1);
+}
+.tags-loop.categories__cards li:hover img {
+  transform: scale(1.1);
+}
+.tags-loop.categories__cards li img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition: all 0.3s;
+}
+.tags-loop.categories__cards .tag {
+  width: 100%;
+  text-align: center;
+}
+.tags-loop.categories__cards .tag span {
+  display: inline-block;
+  margin-top: 1rem;
+  font-weight: 400;
 }
 
 .cta__title {
@@ -418,6 +478,20 @@ html {
   font-size: 1.6rem;
   padding: 2rem;
   border-radius: 0 1.6rem 1.6rem 0;
+}
+
+.breadcrumbs {
+  margin: 3rem 0;
+}
+.breadcrumbs li {
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+.breadcrumbs li span {
+  margin: 0 1.5rem;
+}
+.breadcrumbs__current a {
+  color: #838383;
 }
 
 .hero {
@@ -507,4 +581,11 @@ html {
 .footer__copy {
   font-size: 1.4rem;
   font-weight: 300;
+}
+
+.categories {
+  padding: 3rem 0 17rem;
+}
+.categories__title {
+  text-align: center;
 }

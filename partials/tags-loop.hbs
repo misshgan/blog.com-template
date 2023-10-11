@@ -1,0 +1,79 @@
+<ul class="tags-loop flex {{^if categories}} items-center {{/if}} {{classes}}">
+    {{#if featured}}
+        <li class="tag-featured flex flex-cc">{{> icons/yellow-star}}</li>
+    {{/if}}
+    {{#if outside}}
+        {{#get "tags"}}
+            {{#foreach tags}}
+            <li>
+                <a href="{{url}}" class="tag tag-{{slug}} {{#if accent_color}}colorful{{/if}}">{{name}}</a>
+
+                {{#if accent_color}}
+                    <style>
+                        .tag-{{slug}}.colorful {
+                            background: {{accent_color}}0D;
+                            color: {{accent_color}};
+                        }
+                    </style>
+                {{/if}}
+            </li>
+        {{/foreach}}
+        {{/get}}
+    {{else}}
+        {{#foreach tags}}
+            <li>
+                <a href="{{url}}" class="tag tag-{{slug}} {{#if accent_color}}colorful{{/if}}">{{name}}</a>
+
+                {{#if accent_color}}
+                    <style>
+                        .tag-{{slug}}.colorful {
+                            background: {{accent_color}}0D;
+                            color: {{accent_color}};
+                        }
+                    </style>
+                {{/if}}
+            </li>
+        {{/foreach}}
+    {{/if}}
+    {{#if categories}}
+        {{#get "tags"}}
+            {{#foreach tags}}
+            <li>
+                <a href="{{url}}">
+                    {{#if feature_image}}
+                        <div class="tag__image">
+                            {{> image
+                                image_type="tag"
+                                image_class="lazyload"
+                                image_url=feature_image
+                                size_xs=true
+                                size_s=true
+                                size_m=true
+                                loading="lazy"
+                            }}
+                        </div>
+                    {{/if}}
+                    <p class="tag tag-{{slug}} {{#if accent_color}}colorful{{/if}}">
+                        {{name}}
+                        <br>
+                        {{#get "posts"}}
+                            <span>{{#plural posts.length empty=(t 'No posts') singular=(t '1 post') plural=(t '% posts')}}{{/plural}}</span>
+                        {{/get}}
+                    </p>
+
+                    {{#if accent_color}}
+                        <style>
+                            .tag-{{slug}}.colorful {
+                                background: {{accent_color}}0D;
+                                color: {{accent_color}};
+                            }
+                        </style>
+                    {{/if}}
+                </a>
+            </li>
+        {{/foreach}}
+        {{/get}}
+    {{else}}
+
+    {{/if}}
+</ul>
