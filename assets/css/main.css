@@ -552,6 +552,7 @@ html {
 .footer__brand {
   display: block;
   height: 50px;
+  margin-bottom: 4rem;
 }
 .footer__brand img {
   height: 100%;
