@@ -1,5 +1,6 @@
 .header {
   background: $color-light-gray;
+  padding: 3rem 5rem;
 
   &__brand {
     height: 5rem;
@@ -18,10 +19,6 @@
   &__buttons {
   }
   &__user-avatar {
-  }
-
-  .container {
-    padding: 3rem 0;
   }
 }
 

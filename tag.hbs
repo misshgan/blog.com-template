@@ -1,5 +1,22 @@
 {{!< default}}
 
+{{#tag}}
+
+<aside>
+    <nav class="breadcrumbs" aria-label="breadcrumbs">
+        <ol class="flex items-center">
+            <li><a class="link" href="{{@site.url}}">Home</a><span>{{> icons/arrow-right-thin}}</span></li>
+            <li><a class="link" href="{{@site.url}}/categories/">Categories</a><span>{{> icons/arrow-right-thin}}</span></li>
+            <li class="breadcrumbs__current"><a href="{{@site.url}}/tag/{{slug}}" aria-current="location">{{name}}</a></li>
+        </ol>
+    </nav>
+</aside>
+
+<section class="collection">
+
+</section>
+{{/tag}}
+
 <div class="gh-page">
     <div class="gh-container">
 

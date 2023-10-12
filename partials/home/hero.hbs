@@ -1,17 +1,13 @@
 {{!< default}}
 
-<div class="container">
+<section class="hero mr-big-b">
+    {{#if @site.description}}
+        <h1 class="heading-1 hero__title">{{@site.description}}</h1>
+    {{/if}}
 
-    <section class="hero mr-big-b">
-        {{#if @site.description}}
-            <h1 class="heading-1 hero__title">{{@site.description}}</h1>
-        {{/if}}
+    {{> big-image-cta classes="hero__cta"}}
 
-        {{> big-image-cta classes="hero__cta"}}
-
-        {{#if @custom.show_categories_below_hero_cta_section}}
-            {{> tags-loop classes="size-l hero__tags" outside=true}}
-        {{/if}}
-    </section>
-
-</div>
+    {{#if @custom.show_categories_below_hero_cta_section}}
+        {{> tags-loop classes="size-l hero__tags" outside=true}}
+    {{/if}}
+</section>
