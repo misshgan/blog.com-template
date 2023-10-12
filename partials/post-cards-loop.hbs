@@ -3,6 +3,15 @@
         <h2 class="cards-loop__title mr-md-b heading-2">{{t title}}</h2>
     {{/if}}
     
+   {{#match cols "=" '3'}}
+    <ul class="cards-loop__cards flex">
+        {{#get "posts" include="tags" filter=filter}}
+            {{#foreach posts}}
+                {{> post-card classes="width-third"}}
+            {{/foreach}}
+        {{/get}}
+    </ul>
+    {{else}}
     <ul class="cards-loop__cards flex">
         {{#get "posts" include="tags" filter=filter}}
             {{#foreach posts}}
@@ -10,4 +19,5 @@
             {{/foreach}}
         {{/get}}
     </ul>
+   {{/match}}
 </section>
