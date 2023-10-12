@@ -16,7 +16,9 @@
                     <span class="footer__title">{{@site.title}}</span>
                 {{/if}}
             {{/link}}
-            {{> cta classes="cta_footer"}}
+            {{#if @member}}
+                {{> cta classes="cta_footer"}}
+            {{/if}}
             <ul class="footer__socials flex items-center">
                 {{#if @site.facebook}}
                     <li class="footer__social"><a href="{{facebook_url}}">{{> icons/facebook}}</a></li>
