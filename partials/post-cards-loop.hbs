@@ -5,15 +5,15 @@
     
    {{#match cols "=" '3'}}
     <ul class="cards-loop__cards flex">
-        {{#get "posts" include="tags" filter=filter}}
+        {{#get "posts" include="tags" filter=filter limit=limit}}
             {{#foreach posts}}
                 {{> post-card classes="width-third"}}
             {{/foreach}}
         {{/get}}
     </ul>
-    {{else}}
+    {{else match cols "=" '2'}}
     <ul class="cards-loop__cards flex">
-        {{#get "posts" include="tags" filter=filter}}
+        {{#get "posts" include="tags" filter=filter limit=limit}}
             {{#foreach posts}}
                 {{> post-card classes="width-half"}}
             {{/foreach}}

@@ -1,0 +1,28 @@
+<div class="authors flex items-center">
+    <ul class="flex items-center">
+        {{#foreach authors}}
+            <li class="authors__avatar">
+                <a href="{{url}}" title="{{name}}" aria-label="{{name}}">
+                {{#if profile_image}}
+                    {{> image
+                    image_type="author"
+                    image_class="lazyload"
+                    image_url=profile_image
+                    size_xxs=true
+                    size_xs=true
+                    }}
+                {{else}}
+                    {{> icons/avatar}}
+                {{/if}}
+                </a>
+            </li>
+            </li>
+        {{/foreach}}
+    </ul>
+    <div class="authors__info">
+        <p class="authors__names">{{authors}}</p>
+       <div>
+            <span class="gh-post-meta"><time datetime="{{date format="YYYY-MM-DD"}}">{{date format="D MMM YYYY"}}</time> <span class="bull">&bull;</span> {{reading_time}}</span>
+       </div>
+    </div>
+</div>

@@ -6,8 +6,8 @@
 .gh-canvas,
 .kg-width-full.kg-content-wide {
     --gap: 4vw;
-    --main: min(var(--content-width, 720px), 100% - var(--gap) * 2);
-    --wide: minmax(0, calc((var(--container-width, 1200px) - var(--content-width, 720px)) / 2));
+    --main: min(var(--content-width, 820px), 100% - var(--gap) * 2);
+    --wide: minmax(0, calc((var(--container-width, 1440px) - var(--content-width, 820px)) / 4));
     --full: minmax(var(--gap), 1fr);
 
     display: grid;
@@ -44,6 +44,26 @@
     margin-top: 4vmin;
 }
 
+.gh-content {
+
+    .kg-gallery-image {
+        border-radius: 2rem;
+        overflow: hidden;
+    }
+}
+
+.gh-content h2 {
+    font-size: 5rem;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.gh-content h3 {
+    font-size: 3.4rem;
+    font-weight: 500;
+    line-height: normal;
+}
+
 .gh-content [id]:not(:first-child) {
     margin: 1.5em 0 0;
 }
@@ -57,15 +77,18 @@
     margin-top: 6vmin;
 }
 
-.gh-canvas > blockquote,
 .gh-canvas > ol,
 .gh-canvas > ul,
 .gh-canvas > dl,
 .gh-canvas > p {
-    font-family: var(--font-serif);
+    font-family: unset;
     font-weight: 400;
     font-size: 2rem;
     line-height: 1.6em;
+}
+
+.gh-canvas > p.gh-excerpt {
+    font-family: unset;
 }
 
 .gh-content > ul,
@@ -85,9 +108,13 @@
 .gh-content blockquote {
     position: relative;
     font-style: italic;
+
+    text-align: center;
+    font-size: 2.6rem;
+    font-weight: 400;
 }
 
-.gh-content blockquote::before {
+.gh-content blockquote.kg-blockquote-alt::before {
     content: "";
     position: absolute;
     left: -1.5em;
@@ -95,6 +122,15 @@
     bottom: 0;
     width: 0.3rem;
     background: var(--color-primary);
+}
+
+.gh-content blockquote.kg-blockquote-alt {
+    font-size: 2.6rem;
+    font-style: italic;
+    font-weight: 400;
+    text-align:initial;
+    padding-left: 0;
+    line-height: 1.5;
 }
 
 @media (max-width: 650px) {

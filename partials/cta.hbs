@@ -1,4 +1,4 @@
-{{#if @member}}
+{{^if @member}}
     <article class="cta {{classes}}{{#if margin-bottom}} mr-big-b {{/if}}{{#if margin-top}} mr-big-t {{/if}} flex flex-col {{^match classes '=' 'cta_footer'}} items-center {{/match}}">
         {{#match classes "=" 'cta_footer'}}
             <h4 class="cta__title heading-4">{{@custom.CTA_section_title}}</h4>
