@@ -1,13 +1,8 @@
 .cards-loop {
-
-    .container {
-    }
-
-    &__title {
-
-    }
     &__cards {
         column-gap: 2%;
+        row-gap: 7rem;
+        flex-wrap: wrap;
     }
 }
 
@@ -42,12 +37,14 @@
         padding: 1.2rem 2rem;
         font-size: 2rem;
         font-weight: 700;
+        line-height: normal;
     }
 
 
     &.size-m .tag {
         padding: 0.8rem 1.4rem;
         font-size: 2rem;
+        line-height: normal;
     }
 
     &.size-m .tag-featured {
@@ -59,6 +56,7 @@
     &.size-s .tag {
         font-size: 1.6rem;
         padding: 0.6rem 1.2rem;
+        line-height: normal;
     }
 
     &.size-s .tag-featured {

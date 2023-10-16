@@ -58,10 +58,6 @@ button {
   cursor: pointer;
 }
 
-html {
-  font-size: 62.5% !important;
-}
-
 .mr-big-t {
   margin-top: 17rem;
 }
@@ -338,6 +334,8 @@ html {
 .cards-loop__cards {
   -moz-column-gap: 2%;
        column-gap: 2%;
+  row-gap: 7rem;
+  flex-wrap: wrap;
 }
 
 .tags-loop {
@@ -366,10 +364,12 @@ html {
   padding: 1.2rem 2rem;
   font-size: 2rem;
   font-weight: 700;
+  line-height: normal;
 }
 .tags-loop.size-m .tag {
   padding: 0.8rem 1.4rem;
   font-size: 2rem;
+  line-height: normal;
 }
 .tags-loop.size-m .tag-featured {
   width: 4rem;
@@ -378,6 +378,7 @@ html {
 .tags-loop.size-s .tag {
   font-size: 1.6rem;
   padding: 0.6rem 1.2rem;
+  line-height: normal;
 }
 .tags-loop.size-s .tag-featured {
   height: 3.5rem;
