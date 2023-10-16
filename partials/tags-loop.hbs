@@ -56,7 +56,7 @@
                     <p class="tag tag-{{slug}} {{#if accent_color}}colorful{{/if}}">
                         {{name}}
                         <br>
-                        {{#get "posts"}}
+                        {{#get "posts" filter="tag:{{slug}}"}}
                             <span>{{#plural posts.length empty=(t 'No posts') singular=(t '1 post') plural=(t '% posts')}}{{/plural}}</span>
                         {{/get}}
                     </p>

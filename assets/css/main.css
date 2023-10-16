@@ -657,6 +657,10 @@ button {
   margin-bottom: 3rem;
 }
 
+.authors {
+  margin-top: 3rem;
+}
+
 .gh-content .kg-callout-card {
   padding: 2rem 2.4rem;
   border-radius: 2rem;
