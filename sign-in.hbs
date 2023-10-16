@@ -1,0 +1,41 @@
+{{!< default}}
+
+{{#page}}
+
+    <section class="login-page flex {{#if feature_image}} has-image items-center {{/if}}">
+        {{#if feature_image}}
+            <figure class="login-page__feature-image">
+                {{> image
+                    image_type="site"
+                    image_class="lazyload"
+                    image_url=feature_image
+                    size_l=true
+                    loading="lazy"
+                }}
+            </figure>
+        {{/if}}
+        <div class="login-page__text  flex flex-col {{^if feature_image}} items-center {{/if}}">
+            {{#link href=@site.url class="login-page__logo mr-md-b"}}
+                {{#if @site.logo}}
+                    {{> image
+                    image_type="site"
+                    image_class="lazyload"
+                    image_url=@site.logo
+                    size_m=true
+                    loading="lazy"
+                    }}
+                {{else}}
+                    <span class="login-page__logo-text mr-md-b">{{@site.title}}</span>
+                {{/if}}
+            {{/link}}
+            <h1 class="login-page__title heading-1">{{t "Sign in to"}} {{@site.title}}</h1>
+            <form action="#" class="sign-in-form flex {{^if feature_image}} items-center {{/if}} flex-col">
+                <input class="sign-in-form__input" placeholder="Your e-mail@gmail.com" type="email">
+                <button class="sign-in-form__button button">{{t "Send login link"}}</button>
+            </form>
+            <p class="login-page__info">{{t "Don’t have an account yet? "}} <a class="link" href="{{@site.url}}/sign-up/">{{t "Sign up"}}</a></p>
+        </form>
+        </div>
+    </section>
+
+{{/page}}

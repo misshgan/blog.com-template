@@ -19,7 +19,9 @@
 <body class="{{body_class}}">
 <div class="gh-viewport">
 
-{{> header}}
+{{^is 'sign-in, sign-up'}}
+    {{> header}}
+{{/is}}
 
 <main class="gh-main">
 
@@ -28,7 +30,9 @@
 
 </main>
 
-{{> footer}}
+{{^is 'sign-in, sign-up'}}
+    {{> footer}}
+{{/is}}
 
 </div>
 

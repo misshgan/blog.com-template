@@ -1,0 +1,97 @@
+.login-page {
+    padding-top: 17rem;
+    padding-bottom: 7rem;
+    justify-content: center;
+
+    &__text {
+        max-width: 50%;
+    }
+
+    &__logo {
+        max-width: 13rem;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    &__logo-text {
+        font-size: 3.4rem;
+        font-weight: 600;
+        line-height: normal;
+        display: inline-block;
+    }
+    &__title {
+        font-size: 5.2rem;
+        margin-bottom: 3rem;
+        text-align: center;
+    }
+    &__info {
+        color: $color-light-black;
+        font-size: 2rem;
+        font-weight: 400;
+        line-height: normal;
+
+        a {
+            color: var(--ghost-accent-color)
+        }
+    }
+
+   
+    .button {
+    }
+}
+.login-page.has-image {
+    padding-top: 7rem;
+
+    .login-page__feature-image {
+        width: 50%;
+        height: 71.5rem;
+        border-radius: 2rem;
+        overflow: hidden;
+        margin-right: 5rem;
+
+        img {
+            width: 100%;
+            height: 100%;
+
+            object-fit: cover;
+        }
+    }
+
+    .login-page__title {
+        text-align: unset;
+    }
+}
+
+.sign-in-form {
+    width: 100%;
+    margin-bottom: 3rem;
+    max-width: 40rem;
+
+    &__input {
+        border-radius: 2rem;
+        background: $color-light-gray;
+        border: none;
+        padding: 2rem;
+        width: 100%;
+        margin-bottom: 2rem;
+
+        color: $color-full-black;
+        font-size: 2rem;
+        font-weight: 300;
+        line-height: normal;
+
+        &:focus {
+            outline: 1px solid $color-full-black;
+        }
+
+        &::placeholder {
+            color: #838383;
+            font-size: 2rem;
+            font-weight: 300;
+            line-height: normal;
+        }
+    }
+}
+

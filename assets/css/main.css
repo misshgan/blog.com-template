@@ -822,3 +822,90 @@ h1.page-author__name {
   font-weight: 400;
   line-height: normal;
 }
+
+.login-page {
+  padding-top: 17rem;
+  padding-bottom: 7rem;
+  justify-content: center;
+}
+.login-page__text {
+  max-width: 50%;
+}
+.login-page__logo {
+  max-width: 13rem;
+}
+.login-page__logo img {
+  width: 100%;
+}
+.login-page__logo-text {
+  font-size: 3.4rem;
+  font-weight: 600;
+  line-height: normal;
+  display: inline-block;
+}
+.login-page__title {
+  font-size: 5.2rem;
+  margin-bottom: 3rem;
+  text-align: center;
+}
+.login-page__info {
+  color: #292929;
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: normal;
+}
+.login-page__info a {
+  color: var(--ghost-accent-color);
+}
+.login-page.has-image {
+  padding-top: 7rem;
+}
+.login-page.has-image .login-page__feature-image {
+  width: 50%;
+  height: 71.5rem;
+  border-radius: 2rem;
+  overflow: hidden;
+  margin-right: 5rem;
+}
+.login-page.has-image .login-page__feature-image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.login-page.has-image .login-page__title {
+  text-align: unset;
+}
+
+.sign-in-form {
+  width: 100%;
+  margin-bottom: 3rem;
+  max-width: 40rem;
+}
+.sign-in-form__input {
+  border-radius: 2rem;
+  background: #F6F6F6;
+  border: none;
+  padding: 2rem;
+  width: 100%;
+  margin-bottom: 2rem;
+  color: #171717;
+  font-size: 2rem;
+  font-weight: 300;
+  line-height: normal;
+}
+.sign-in-form__input:focus {
+  outline: 1px solid #171717;
+}
+.sign-in-form__input::-moz-placeholder {
+  color: #838383;
+  font-size: 2rem;
+  font-weight: 300;
+  line-height: normal;
+}
+.sign-in-form__input::placeholder {
+  color: #838383;
+  font-size: 2rem;
+  font-weight: 300;
+  line-height: normal;
+}

@@ -22,8 +22,8 @@
     <main class="gh-main">
 
         <section class="error-page flex flex-col items-center">
-            <h1 class="error-page__title">404</h1>
-            <p class="error-page__subtitle">{{t "Oops! It seems you've reached a dead end. The page you were looking for has decided to go on a solo adventure."}}</p>
+            <h1 class="error-page__title">{{statusCode}}</h1>
+            <p class="error-page__subtitle">{{message}}</p>
             <a href="{{@site.url}}" class="button">Back to homepage</a>
         </section>
 
