@@ -29,7 +29,8 @@
     "keywords": [
         "blog.com",
         "theme",
-        "blog.com-theme"
+        "blog.com-theme",
+        "ghost-theme"
     ],
     "devDependencies": {
         "@babel/core": "^7.21.0",
@@ -86,12 +87,12 @@
                 "group": "homepage",
                 "description": "Insert tags' slugs separated by commas."
             },
-            "CTA_section_title": {
+            "cta_section_title": {
                 "type": "text",
                 "description": "Insert text that you would like to see in the CTA section.",
                 "default": "Be the first to know"
             },
-            "CTA_section_button_text": {
+            "cta_section_button_text": {
                 "type": "text",
                 "default": "Subscribe"
             }

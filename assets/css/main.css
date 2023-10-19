@@ -58,6 +58,10 @@ button {
   cursor: pointer;
 }
 
+html {
+  font-size: 62.5% !important;
+}
+
 .mr-big-t {
   margin-top: 17rem;
 }
@@ -651,115 +655,6 @@ button {
   margin-top: 2rem;
   width: 65%;
   margin-right: auto;
-}
-
-.gh-header__tags {
-  margin-bottom: 2rem;
-}
-
-.gh-excerpt {
-  margin-bottom: 3rem;
-}
-
-.authors {
-  margin-top: 3rem;
-}
-
-.gh-content .kg-callout-card {
-  padding: 2rem 2.4rem;
-  border-radius: 2rem;
-  font-size: 1.8rem;
-  font-weight: 400;
-}
-.gh-content .kg-callout-card div.kg-callout-emoji {
-  padding-right: 2rem;
-}
-.gh-content .kg-bookmark-card a.kg-bookmark-container {
-  border-radius: 2rem;
-  border: none;
-  background: #F6F6F6;
-  box-shadow: 0px 2px 8px 0px rgba(61, 61, 61, 0.1);
-  transition: all 0.3s;
-}
-.gh-content .kg-bookmark-card a.kg-bookmark-container:hover {
-  display: flex;
-  text-decoration: none;
-  border-radius: 2rem;
-  border: none;
-  overflow: hidden;
-  color: inherit;
-  transform: scale(1.01);
-}
-.gh-content .kg-bookmark-card div.kg-bookmark-content {
-  padding: 2.4rem 3.4rem;
-}
-.gh-content .kg-bookmark-card div.kg-bookmark-title {
-  font-size: 2.2rem;
-  font-weight: 500;
-  margin-bottom: 0.7rem;
-}
-.gh-content .kg-bookmark-card div.kg-bookmark-description {
-  font-size: 1.5rem;
-  font-weight: 400;
-  color: #292929;
-}
-.gh-content .kg-bookmark-card div.kg-bookmark-metadata {
-  font-size: 1.5rem;
-  font-weight: 500;
-}
-.gh-content .kg-bookmark-card div.kg-bookmark-thumbnail {
-  max-width: 25.6%;
-  min-width: 21rem;
-}
-.gh-content .kg-button-card a.kg-btn {
-  font-family: "Bricolage Grotesque", sans-serif;
-  padding: 1.2rem 3.6rem;
-  background: #292929;
-  color: #fff;
-  border-radius: 2rem;
-  font-size: 2rem;
-  font-weight: 300;
-}
-.gh-content .kg-toggle-card {
-  border-radius: 2rem;
-  background: #F6F6F6;
-  box-shadow: 0px 4px 8px 0px rgba(61, 61, 61, 0.1);
-  padding: 2rem 2.4rem;
-}
-.gh-content .kg-toggle-card .kg-toggle-heading-text {
-  font-size: 2rem;
-  font-weight: 500;
-}
-.gh-content .kg-toggle-card .kg-toggle-content p {
-  font-size: 1.7rem;
-  font-weight: 300;
-}
-.gh-content .kg-toggle-card + .kg-toggle-card {
-  margin-top: 2rem;
-}
-.gh-content .kg-header-card.kg-v2 .kg-header-card-button {
-  font-size: 1.8rem;
-  border-radius: 2rem;
-  padding: 2rem 2.8rem;
-  font-weight: 300;
-  font-family: "Bricolage Grotesque", sans-serif;
-}
-.gh-content .kg-header-card.kg-v2.kg-width-wide .kg-header-card-button, .gh-content .kg-header-card.kg-v2.kg-width-full .kg-header-card-button {
-  font-size: 2rem;
-  padding: 2rem 3.2rem;
-}
-.gh-content .kg-width-regular .kg-signup-card-form.error .kg-signup-card-error, .gh-content .kg-width-wide .kg-signup-card-form.error .kg-signup-card-error, .gh-content .kg-width-full .kg-signup-card-form.error .kg-signup-card-error {
-  font-size: 1.6rem;
-}
-.gh-content .kg-width-regular .kg-signup-card-form.success .kg-signup-card-success, .gh-content .kg-width-wide .kg-signup-card-form.success .kg-signup-card-success, .gh-content .kg-width-full .kg-signup-card-form.success .kg-signup-card-success {
-  font-size: 1.6rem;
-}
-.gh-content .kg-width-regular .kg-signup-card-fields, .gh-content .kg-width-wide .kg-signup-card-fields, .gh-content .kg-width-full .kg-signup-card-fields {
-  width: 75%;
-  font-size: 1.8rem;
-}
-.gh-content .kg-width-regular .kg-signup-card-disclaimer, .gh-content .kg-width-wide .kg-signup-card-disclaimer, .gh-content .kg-width-full .kg-signup-card-disclaimer {
-  font-size: 1.6rem;
 }
 
 .page-author__info {

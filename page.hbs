@@ -15,29 +15,31 @@
 
     <header class="gh-header gh-canvas">
 
-        {{> tags-loop classes="size-m gh-header__tags"}}
-        <h1 class="gh-title heading-1">{{title}}</h1>
+        {{#if @page.show_title_and_feature_image}}
+            {{> tags-loop classes="size-m gh-header__tags"}}
+            <h1 class="gh-title heading-1">{{title}}</h1>
 
-        {{#if custom_excerpt}}
-        <p class="gh-excerpt">{{custom_excerpt}}</p>
-        {{/if}}
-
-        {{!-- {{> authors}} --}}
-
-        {{#if feature_image}}
-        <figure class="gh-feature-image">
-            {{> image
-                image_type="post"
-                image_class="lazyload"
-                image_url=feature_image
-                size_l=true
-                size_m=true
-                loading="lazy"
-            }}
-            {{#if feature_image_caption}}
-                <figcaption>{{feature_image_caption}}</figcaption>
+            {{#if custom_excerpt}}
+            <p class="gh-excerpt">{{custom_excerpt}}</p>
             {{/if}}
-        </figure>
+
+            {{!-- {{> authors}} --}}
+
+            {{#if feature_image}}
+            <figure class="gh-feature-image">
+                {{> image
+                    image_type="post"
+                    image_class="lazyload"
+                    image_url=feature_image
+                    size_l=true
+                    size_m=true
+                    loading="lazy"
+                }}
+                {{#if feature_image_caption}}
+                    <figcaption>{{feature_image_caption}}</figcaption>
+                {{/if}}
+            </figure>
+            {{/if}}
         {{/if}}
 
     </header>
