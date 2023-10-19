@@ -17,13 +17,12 @@
 
 </head>
 <body class="{{body_class}}">
-<div class="gh-viewport">
 
 {{^is 'sign-in, sign-up'}}
     {{> header}}
 {{/is}}
 
-<main class="gh-main">
+<main class="container">
 
     {{{body}}}
     {{!-- All content gets inserted here, index.hbs, post.hbs, etc --}}
@@ -33,8 +32,6 @@
 {{^is 'sign-in, sign-up'}}
     {{> footer}}
 {{/is}}
-
-</div>
 
 {{!-- <foot> --}}
 {{ghost_foot}}
