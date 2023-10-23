@@ -7,6 +7,3 @@ production stylesheet in assets/built/screen.css using: npm run dev
 
 /* Normalize CSS */
 @import 'normalize.css';
-
-/* SCSS styles */
-@import "main.css";
