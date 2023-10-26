@@ -5,5 +5,55 @@ production stylesheet in assets/built/screen.css using: npm run dev
 
 */
 
-/* Normalize CSS */
-@import 'normalize.css';
+/*========================================*/
+/* 1. Settings 
+/*========================================*/
+@import 'settings/_settings';
+@import 'settings/_mq';
+
+/*========================================*/
+/* 2. Tools
+/*========================================*/
+@import 'tools/_mixins';
+
+/*========================================*/
+/* 3. Generic 
+/*========================================*/
+@import 'generic/_box-sizing';
+@import 'generic/_normalize';
+
+/*========================================*/
+/* 4. Elements 
+/*========================================*/
+@import 'elements/_body';
+@import 'elements/_button';
+@import 'elements/_code';
+@import 'elements/_heading';
+@import 'elements/_image';
+@import 'elements/_input';
+@import 'elements/_list';
+@import 'elements/_misc';
+@import 'elements/_table';
+@import 'elements/_text';
+/*========================================*/
+/* 5. Objects 
+/*========================================*/
+@import 'objects/_flexgrid';
+@import 'objects/_keyframes';
+
+/*========================================*/
+/* 6. Components 
+/*========================================*/
+
+
+/*========================================*/
+/* 7. Trumps 
+/*========================================*/
+@import 'utilities/_animation';
+@import 'utilities/_color';
+@import 'utilities/_flex';
+@import 'utilities/_margin';
+@import 'utilities/_padding';
+@import 'utilities/_states';
+@import 'utilities/_text';
+@import 'utilities/_utilities';
