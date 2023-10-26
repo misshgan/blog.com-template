@@ -1,0 +1,23 @@
+.header {
+
+    .wrapper {
+    }
+
+    &__title {
+        
+    }
+    &__menu {
+    }
+    &__buttons {
+    }
+    &__user-avatar {
+    }
+}
+.header-search {
+    &__toggle {
+    }
+}
+.button {
+}
+.signin-link {
+}

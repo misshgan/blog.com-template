@@ -11,9 +11,9 @@ import 'lazysizes';
 // import a plugin
 import 'lazysizes/plugins/parent-fit/ls.parent-fit';
 
-const Comb = require('csscomb');
-const comb = new Comb('zen');
-comb.processPath('assets/css');
+// const Comb = require('csscomb');
+// const comb = new Comb('zen');
+// comb.processPath('assets/css');
 
 
 // Call the menu and infinite scroll functions
