@@ -1,20 +1,48 @@
 .header {
+    background-color: var(--color-light-gray);
 
     .wrapper {
+        padding: 3rem 0;
     }
 
     &__title {
-        
+        font-size: 4rem;
+        font-size: clamp(2.4rem, 4vw, 4rem);
+    }
+    &__logo {
+
     }
     &__menu {
+
+        ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        li {
+            font-size: 2rem;
+        }
+
+        li:not(:last-child) {
+            margin-right: min(4vw, 6rem);
+        }
     }
     &__buttons {
+
     }
     &__user-avatar {
     }
 }
 .header-search {
     &__toggle {
+        margin-right: 2rem;
+
+        i {
+            display: inline-block;
+            width: 3.8rem;
+            height: 3.8rem;
+        }
     }
 }
 .button {

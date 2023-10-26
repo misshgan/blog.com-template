@@ -20,10 +20,10 @@
          {{!-- Menu --}}
         <nav class="header__menu flex">
             {{!-- Main navigation --}}
-            {{navigation classes="flex flex-sbc"}}
+            {{navigation classes="flex"}}
         </nav>
 
-        <div class="header__buttons flex flex-sbc">
+        <div class="header__buttons flex items-center">
             {{!-- Native Search --}}
             <button class="header-search__toggle" data-ghost-search title="{{t "Search"}}" aria-label="{{t "Search"}}">
                 {{> icon name='search'}}
@@ -35,7 +35,7 @@
             {{else if @member}}
                 {{!-- nothing --}}
             {{else}}
-                <a href="/sign-in/" class="button signin-link">{{t "Sign in"}}</a>
+                <a href="/sign-in/" class="btn signin-link">{{t "Sign in"}}</a>
             {{/if}}
             {{/if}}
 

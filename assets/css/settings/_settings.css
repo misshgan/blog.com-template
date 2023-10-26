@@ -71,7 +71,7 @@
     --font-mono: Consolas, Monaco, monospace;
     --font-body: var(--font-default), var(--font-system);
     --font-headings: var(--font-default), var(--font-system);
-    --font-size-base: 1rem;
+    --font-size-base: 62.5%;
     --font-weight-thin: 100;
     --font-weight-extra-light: 200;
     --font-weight-light: 300;
