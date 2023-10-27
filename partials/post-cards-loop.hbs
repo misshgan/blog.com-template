@@ -4,7 +4,7 @@
     {{/if}}
     
    {{#match cols "=" '3'}}
-    <ul class="cards-loop__cards flex">
+    <ul class="cards-loop__cards flex list--unstyled">
         {{#get "posts" include="tags" filter=filter limit=limit}}
             {{#foreach posts}}
                 {{> post-card classes="width-third"}}
@@ -12,7 +12,7 @@
         {{/get}}
     </ul>
     {{else match cols "=" '2'}}
-    <ul class="cards-loop__cards flex">
+    <ul class="cards-loop__cards flex list--unstyled">
         {{#get "posts" include="tags" filter=filter limit=limit}}
             {{#foreach posts}}
                 {{> post-card classes="width-half"}}

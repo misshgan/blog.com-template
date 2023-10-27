@@ -8,6 +8,7 @@ h6 {
     font-family: var(--font-headings);
     color: inherit;
     word-break: break-word;
+    margin: 0;
 
     a {
         color: inherit;

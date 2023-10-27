@@ -1,0 +1,61 @@
+.cards-loop {
+    &__title {
+        font-size: clamp(3.2rem, 3.6vw, 5rem);
+        margin-bottom: clamp(6rem, 6vw, 7rem);
+    }
+    &__cards {
+        column-gap: 2%;
+        margin: 0;
+    }
+}
+
+/* ========================================= Post card */
+
+.post-card-wrapper.width-half {
+    width: 49%;
+
+    .post-card {
+
+        &__img {
+            height: clamp(26.4rem, 35vw, 51rem);
+            border-radius: var(--global-radius);
+            overflow: hidden;
+            margin-bottom: clamp(2rem, 2vw, 3rem);
+    
+            img {
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+        &__title {
+            font-size: clamp(2.6rem, 2.6vw, 3.4rem);
+            margin: 2rem 0 1rem;
+        }
+        &__excerpt {
+            font-size: clamp(1.8rem, 2vw, 2.4rem);
+            margin-bottom: clamp(2rem, 2vw, 3rem);
+        }
+        &__footer {
+            font-size: clamp(1.4rem, 1.6vw, 2rem);
+        }
+        &__date {
+        }
+        &__reading-time {
+            font-size: inherit;
+            margin-bottom: 0;
+        }
+    }
+}
+
+.flex {
+}
+.flex-col {
+}
+.heading-3 {
+}
+.link {
+}
+.heading-4 {
+}
+.items-center {
+}

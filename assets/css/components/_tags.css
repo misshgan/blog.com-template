@@ -1,24 +1,35 @@
 .tags-loop {
 }
 .tag-featured {
+    background: rgba(255, 219, 89, 0.10);
+    border-radius: var(--global-radius);
 }
 .tag {
     background-color: var(--color-light-gray);
+    border-radius: var(--global-radius);
 
     &__image {
     }
 }
 
 .tags-loop.size-l {
-    row-gap: 2rem;
+    gap: 2rem;
     
     .tag {
         padding: 1.2rem 2rem;
-        font-size: 2rem;
-        border-radius: var(--global-radius);
+        font-size: clamp(1.6rem, 1.8vw, 2rem);
+    }
+}
+
+.tags-loop.size-m {
+    gap: 1rem;
+
+    .tag {
+        padding: .8rem 1.4rem;
+        font-size: clamp(1.4rem, 1.6vw, 2rem);
     }
 
-    li:not(:last-child) {
-        margin-right: 2rem;
+    .tag-featured {
+        padding: 1rem;
     }
 }
