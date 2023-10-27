@@ -5,6 +5,10 @@
         padding: 3rem 0;
     }
 
+    &__brand {
+       
+    }
+
     &__title {
         font-size: 4rem;
         font-size: clamp(2.4rem, 4vw, 4rem);

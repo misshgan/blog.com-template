@@ -1,0 +1,16 @@
+.hero {
+
+    .wrapper {
+
+    }
+
+    &__title {
+        font-size: clamp(3.4rem, 5vw, 6rem);
+        max-width: 65%;
+        margin: 0 0 2rem;
+    }
+}
+.mr-big-b {
+}
+.heading-1 {
+}

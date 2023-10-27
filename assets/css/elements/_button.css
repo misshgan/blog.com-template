@@ -34,4 +34,6 @@ button {
     background-color: var(--color-full-black);
     border-radius: var(--global-radius);
     font-size: 2rem;
+    display: block;
+    width: max-content;
 }

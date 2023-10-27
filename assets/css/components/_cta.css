@@ -1,0 +1,21 @@
+.big-img-cta {
+    position: relative;
+
+    .btn {
+        position: absolute;
+        top: 0;
+        right: 0;
+
+        display: flex;
+        width: 22.5%;
+        height: 10%;
+        align-items: center;
+        justify-content: center;
+        font-size: 2.4rem;
+    }
+
+    &__img {
+    }
+    &__link {
+    }
+}

@@ -45,6 +45,8 @@ production stylesheet in assets/built/screen.css using: npm run dev
 /* 6. Components 
 /*========================================*/
 @import 'components/_header';
+@import 'components/_hero';
+@import 'components/_cta';
 
 /*========================================*/
 /* 7. Trumps 
