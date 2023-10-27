@@ -1,6 +1,6 @@
-<ul class="tags-loop flex {{^if categories}} items-center {{/if}} {{classes}}">
+<ul class="tags-loop flex {{^if categories}} items-center {{/if}} {{classes}} list--unstyled">
     {{#if featured}}
-        <li class="tag-featured flex flex-cc">{{> icons/yellow-star}}</li>
+        <li class="tag-featured flex items-center content-space-b">{{> icons/yellow-star}}</li>
     {{/if}}
     {{#if outside}}
         {{#get "tags"}}

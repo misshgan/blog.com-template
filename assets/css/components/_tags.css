@@ -1,0 +1,28 @@
+.tags-loop {
+}
+.items-center {
+}
+.tag-featured {
+}
+.flex-cc {
+}
+.tag {
+    background-color: var(--color-light-gray);
+
+    &__image {
+    }
+}
+
+.tags-loop.size-l {
+    row-gap: 2rem;
+    
+    .tag {
+        padding: 1.2rem 2rem;
+        font-size: 2rem;
+        border-radius: var(--global-radius);
+    }
+
+    li:not(:last-child) {
+        margin-right: 2rem;
+    }
+}

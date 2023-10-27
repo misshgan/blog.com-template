@@ -1,5 +1,4 @@
 .hero {
-
     .wrapper {
 
     }
@@ -9,8 +8,8 @@
         width: min(84rem, 100%);
         margin: 0 0 2rem;
     }
-}
-.mr-big-b {
-}
-.heading-1 {
+
+    .tags-loop {
+        margin-top: 2rem;
+    }
 }
