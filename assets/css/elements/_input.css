@@ -24,7 +24,7 @@ textarea {
 
     &:focus,
     &:focus-visible {
-        outline: 1px solid var(--color-full-black)
+        outline: 1px solid var(--color-full-black);
     }
 
     &::-webkit-input-placeholder,

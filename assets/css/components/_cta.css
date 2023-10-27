@@ -49,4 +49,28 @@
 
 .cta--footer {
     margin: 0;
+    
+    .cta__title {
+        font-size: 2.4rem;
+        margin-bottom: 2rem;
+        text-align: start;
+        font-weight: 400;
+    }
+    .cta__form {
+        margin: 0;
+        width: 100%;
+    }
+    .cta__form-input {
+        width: 100%;
+        font-size: 1.4rem;
+        background-color: var(--color-white);
+        padding: 1.5rem 1.6rem;
+    }
+    .cta__form-button {
+        font-size: 1.4rem;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+        padding: 1.4rem 1.6rem;
+        border: 1px solid transparent;
+    }
 }
