@@ -113,7 +113,7 @@
 
     /* Grid-system */
     --gutter-w: 1rem;
-    --outer-m: 1rem;
+    --outer-m: 2rem;
     --gutter-comp: calc(var(--gutter-w) * -1);
     --half-gutter-w: calc(var(--gutter-w) * 0.5);
     --container-sm: calc(var(--brakepoint-sm) + var(--gutter-w));
