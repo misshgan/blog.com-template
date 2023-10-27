@@ -2,7 +2,7 @@
     margin-bottom: clamp(10rem, 12vw, 17rem);
 
     &__title {
-        font-size: clamp(3.2rem, 2.5314rem + 1.7143vw, 5rem);
+        font-size: clamp(3.2rem, 2.382rem + 2.909vw, 5rem);
         margin-bottom: clamp(6rem, 6vw, 7rem);
     }
     &__cards {
@@ -47,15 +47,15 @@
             margin-bottom: clamp(2rem, 2vw, 3rem);
         }
         &__title {
-            font-size: clamp(2.6rem, 2.3029rem + 0.7619vw, 3.4rem);
+            font-size: clamp(2.6rem, 2.236rem + 1.293vw, 3.4rem);
             margin: 2rem 0 1rem;
         }
         &__excerpt {
-            font-size: clamp(1.8rem, 1.5771rem + 0.5714vw, 2.4rem);
+            font-size: clamp(1.8rem, 1.527rem + 0.97vw, 2.4rem);
             margin-bottom: clamp(2rem, 2vw, 3rem);
         }
         &__footer {
-            font-size: clamp(1.4rem, 1.1771rem + 0.5714vw, 2rem);
+            font-size: clamp(1.4rem, 1.127rem + 0.97vw, 2rem);
         }
     }
 }
@@ -74,11 +74,11 @@
             margin: 1.6rem 0 1rem;
         }
         &__excerpt {
-            font-size: clamp(1.8rem, 1.7257rem + 0.1905vw, 2rem);
+            font-size: clamp(1.8rem, 1.709rem + 0.323vw, 2rem);
             margin-bottom: 2rem;
         }
         &__footer {
-            font-size: clamp(1.4rem, 1.3257rem + 0.1905vw, 1.6rem);
+            font-size: clamp(1.4rem, 1.309rem + 0.323vw, 1.6rem);
         }
     }
 }

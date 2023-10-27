@@ -16,7 +16,7 @@
         height: 10%;
         align-items: center;
         justify-content: center;
-        font-size: clamp(1.6rem, 1.3029rem + 0.7619vw, 2.4rem);
+        font-size: clamp(1.6rem, 1.236rem + 1.293vw, 2.4rem);
     }
 }
 
@@ -26,7 +26,7 @@
     margin: clamp(10rem, 12vw, 17rem) 0;
 
     &__title {
-        font-size: clamp(2.8rem, 2.2057rem + 1.5238vw, 4.4rem);
+        font-size: clamp(2.8rem, 2.073rem + 2.586vw, 4.4rem);
         text-align: center;
         margin-bottom: clamp(3rem, 3.6vw, 4rem);
         max-width: min(93.5rem, 100%);
@@ -34,10 +34,10 @@
     &__form {
     }
     &__form-input {
-        font-size: clamp(1.6rem, 1.4514rem + 0.3810vw, 2rem);
+        font-size: clamp(1.6rem, 1.418rem + 0.646vw, 2rem);
     }
     &__form-button {
-        font-size: clamp(1.6rem, 1.4514rem + 0.3810vw, 2rem);
+        font-size: clamp(1.6rem, 1.418rem + 0.646vw, 2rem);
         border-top-left-radius: 0;
         border-bottom-left-radius: 0;
         padding: 1.9rem;
