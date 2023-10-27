@@ -2,20 +2,21 @@
     position: relative;
 
     .btn {
+    }
+
+    &__img {
+    }
+    &__link {
         position: absolute;
         top: 0;
         right: 0;
+        border-radius: clamp(1.4rem, 1.6vw, 2rem);
 
         display: flex;
         width: 22.5%;
         height: 10%;
         align-items: center;
         justify-content: center;
-        font-size: 2.4rem;
-    }
-
-    &__img {
-    }
-    &__link {
+        font-size: clamp(1.6rem, 2vw, 2.4rem)
     }
 }

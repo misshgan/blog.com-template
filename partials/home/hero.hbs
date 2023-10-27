@@ -5,7 +5,9 @@
         <h1 class="heading-1 hero__title">{{@site.description}}</h1>
     {{/if}}
 
-    {{> big-image-cta classes="hero__cta"}}
+    {{#if @custom.hero_cta_background_image}}
+        {{> big-image-cta classes="hero__cta"}}
+    {{/if}}
 
     {{#if @custom.show_categories_below_hero_cta_section}}
         {{> tags-loop classes="size-l hero__tags" outside=true}}
