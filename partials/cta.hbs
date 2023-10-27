@@ -1,5 +1,5 @@
 {{^if @member}}
-    <article class="cta {{classes}}{{#if margin-bottom}} mr-big-b {{/if}}{{#if margin-top}} mr-big-t {{/if}} flex flex-col {{^match classes '=' 'cta_footer'}} items-center {{/match}}">
+    <article class="cta {{classes}} flex flex-col {{^match classes '=' 'cta_footer'}} items-center {{/match}}">
         {{#match classes "=" 'cta_footer'}}
             <h4 class="cta__title heading-4">{{@custom.cta_section_title}}</h4>
         {{else}}
@@ -7,7 +7,7 @@
         {{/match}}
         <form action="#" class="cta__form flex items-center">
             <input class="cta__form-input" placeholder="Your e-mail@gmail.com" type="email">
-            <button class="cta__form-button button">{{@custom.cta_section_button_text}}</button>
+            <button class="cta__form-button btn">{{@custom.cta_section_button_text}}</button>
         </form>
     </article>
 {{/if}}
