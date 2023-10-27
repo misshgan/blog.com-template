@@ -25,7 +25,9 @@
             <h4 class="post-card__title heading-4"><a class="link" href="{{url}}">{{title}}</a></h4>
 
         {{/match}}
-        {{#if excerpt}}
+        {{#if custom_excerpt}}
+            <p class="post-card__excerpt">{{custom_excerpt}}</p>
+        {{else}}
             <p class="post-card__excerpt">{{excerpt}}</p>
         {{/if}}
         <div class="post-card__footer flex items-center">
