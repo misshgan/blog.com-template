@@ -20,7 +20,7 @@ body {
 }
 
 main {
-    padding: clamp(6rem, 7.5vw, 10.5rem) 0 0;
+    padding: clamp(6rem, 3.955rem + 4.545vw, 10.5rem) 0 0;
 }
 
 body {

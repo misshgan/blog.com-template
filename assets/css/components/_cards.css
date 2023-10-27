@@ -1,13 +1,13 @@
 .cards-loop {
-    margin-bottom: clamp(10rem, 12vw, 17rem);
+    margin-bottom: clamp(10rem, 6.818rem + 7.071vw, 17rem);
 
     &__title {
-        font-size: clamp(3.2rem, 2.382rem + 2.909vw, 5rem);
-        margin-bottom: clamp(6rem, 6vw, 7rem);
+        font-size: clamp(3.2rem, 2.382rem + 1.818vw, 5rem);
+        margin-bottom: clamp(6rem, 5.545rem + 1.01vw, 7rem);
     }
     &__cards {
         column-gap: 2%;
-        row-gap: clamp(4rem, 6vw, 10rem);
+        row-gap: clamp(4rem, 1.273rem + 6.061vw, 10rem);
         margin: 0;
         flex-wrap: wrap;
     }
@@ -43,19 +43,19 @@
     .post-card {
 
         &__img {
-            height: clamp(26.4rem, 35vw, 51rem);
-            margin-bottom: clamp(2rem, 2vw, 3rem);
+            height: clamp(26.4rem, 15.218rem + 24.848vw, 51rem);
+            margin-bottom: clamp(2rem, 1.545rem + 1.01vw, 3rem);
         }
         &__title {
-            font-size: clamp(2.6rem, 2.236rem + 1.293vw, 3.4rem);
+            font-size: clamp(2.6rem, 2.236rem + 0.808vw, 3.4rem);
             margin: 2rem 0 1rem;
         }
         &__excerpt {
-            font-size: clamp(1.8rem, 1.527rem + 0.97vw, 2.4rem);
-            margin-bottom: clamp(2rem, 2vw, 3rem);
+            font-size: clamp(1.8rem, 1.527rem + 0.606vw, 2.4rem);
+            margin-bottom: clamp(2rem, 1.545rem + 1.01vw, 3rem);
         }
         &__footer {
-            font-size: clamp(1.4rem, 1.127rem + 0.97vw, 2rem);
+            font-size: clamp(1.4rem, 1.127rem + 0.606vw, 2rem);
         }
     }
 }
@@ -66,7 +66,7 @@
     .post-card {
 
         &__img {
-            height: clamp(26.4rem, 35vw, 45.3rem);
+            height: clamp(26.4rem, 17.809rem + 19.091vw, 45.3rem);
             margin-bottom: 2rem;
         }
         &__title {
@@ -74,11 +74,11 @@
             margin: 1.6rem 0 1rem;
         }
         &__excerpt {
-            font-size: clamp(1.8rem, 1.709rem + 0.323vw, 2rem);
+            font-size: clamp(1.8rem, 1.709rem + 0.202vw, 2rem);
             margin-bottom: 2rem;
         }
         &__footer {
-            font-size: clamp(1.4rem, 1.309rem + 0.323vw, 1.6rem);
+            font-size: clamp(1.4rem, 1.309rem + 0.202vw, 1.6rem);
         }
     }
 }

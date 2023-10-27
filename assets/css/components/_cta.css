@@ -9,35 +9,35 @@
         position: absolute;
         top: 0;
         right: 0;
-        border-radius: clamp(1.4rem, 1.6vw, 2rem);
+        border-radius: clamp(1.4rem, 1.127rem + 0.606vw, 2rem);
 
         display: flex;
         width: 22.5%;
         height: 10%;
         align-items: center;
         justify-content: center;
-        font-size: clamp(1.6rem, 1.236rem + 1.293vw, 2.4rem);
+        font-size: clamp(1.6rem, 1.236rem + 0.808vw, 2.4rem);
     }
 }
 
 /* -------------------------------- Default CTA */
 
 .cta {
-    margin: clamp(10rem, 12vw, 17rem) 0;
+    margin: clamp(10rem, 6.818rem + 7.071vw, 17rem) 0;
 
     &__title {
-        font-size: clamp(2.8rem, 2.073rem + 2.586vw, 4.4rem);
+        font-size: clamp(2.8rem, 2.073rem + 1.616vw, 4.4rem);
         text-align: center;
-        margin-bottom: clamp(3rem, 3.6vw, 4rem);
+        margin-bottom: clamp(3rem, 2.545rem + 1.01vw, 4rem);
         max-width: min(93.5rem, 100%);
     }
     &__form {
     }
     &__form-input {
-        font-size: clamp(1.6rem, 1.418rem + 0.646vw, 2rem);
+        font-size: clamp(1.6rem, 1.418rem + 0.404vw, 2rem);
     }
     &__form-button {
-        font-size: clamp(1.6rem, 1.418rem + 0.646vw, 2rem);
+        font-size: clamp(1.6rem, 1.418rem + 0.404vw, 2rem);
         border-top-left-radius: 0;
         border-bottom-left-radius: 0;
         padding: 1.9rem;

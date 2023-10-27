@@ -1,16 +1,16 @@
 .footer {
     background-color: var(--color-light-gray);
-    padding: clamp(6rem, 4.462rem + 6.154vw, 10rem) 0 3rem;
+    padding: clamp(6rem, 4.182rem + 4.04vw, 10rem) 0 3rem;
 
     &__info {
         max-width: 40rem;
     }
     &__brand {
         display: block;
-        margin-bottom: clamp(2rem, 1.615rem + 1.538vw, 3rem);
+        margin-bottom: clamp(2rem, 1.545rem + 1.01vw, 3rem);
     }
     &__title {
-        font-size: clamp(2.4rem, 1.673rem + 2.586vw, 4rem);
+        font-size: clamp(2.4rem, 1.673rem + 1.616vw, 4rem);
         line-height: 1;
         font-weight: 500;
     }
@@ -21,7 +21,7 @@
         column-gap: 1.4rem;
     }
     &__social {
-        margin-top: clamp(3rem, 1.846rem + 4.615vw, 6rem);
+        margin-top: clamp(3rem, 1.636rem + 3.03vw, 6rem);
 
         svg {
             width: 3rem;
@@ -42,7 +42,7 @@
         }
 
         li {
-            font-size: clamp(2rem, 1.818rem + 0.646vw, 2.4rem);
+            font-size: clamp(2rem, 1.818rem + 0.404vw, 2.4rem);
             line-height: 1;
 
             &:not(:last-child) {
@@ -51,9 +51,9 @@
         }
     }
     &__nav-title {
-        font-size: clamp(2rem, 1.636rem + 1.293vw, 2.8rem);
+        font-size: clamp(2rem, 1.636rem + 0.808vw, 2.8rem);
         font-weight: 500;
-        margin-bottom: clamp(2rem, 1.615rem + 1.538vw, 3rem);
+        margin-bottom: clamp(2rem, 1.545rem + 1.01vw, 3rem);
     }
     &__copy {
         margin-top: 2rem;
