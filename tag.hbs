@@ -2,46 +2,50 @@
 
 {{#tag}}
 
-<aside>
-    <nav class="breadcrumbs" aria-label="breadcrumbs">
-        <ol class="flex items-center">
-            <li><a class="link" href="{{@site.url}}">Home</a><span>{{> icons/arrow-right-thin}}</span></li>
-            <li><a class="link" href="{{@site.url}}/categories/">Categories</a><span>{{> icons/arrow-right-thin}}</span></li>
-            <li class="breadcrumbs__current"><a href="{{@site.url}}/tag/{{slug}}" aria-current="location">{{name}}</a></li>
-        </ol>
-    </nav>
-</aside>
+<div class="container wrapper container--breadcrumbs">
+    <aside>
+        <nav class="breadcrumbs" aria-label="breadcrumbs">
+            <ol class="flex items-center list--unstyled">
+                <li><a class="link" href="{{@site.url}}">Home</a><span>{{> icons/arrow-right-thin}}</span></li>
+                <li><a class="link" href="{{@site.url}}/categories/">Categories</a><span>{{> icons/arrow-right-thin}}</span></li>
+                <li class="breadcrumbs__current"><a href="{{@site.url}}/tag/{{slug}}" aria-current="location">{{name}}</a></li>
+            </ol>
+        </nav>
+    </aside>
+</div>
 
-<section class="tag">
-    <header class="tag__header flex">
-        <div class="tag__header-text mr-md-b mr-md-t flex flex-col items-center">
-            <h1 class="tag__title heading-1">{{name}}</h1>
-            <div class="tag__header-text">
-                <p class="tag__posts-amount">
-                    {{plural ../pagination.total empty='posts' singular='% post' plural='% posts'}}
-                </p>
-                <p class="tag__description">
-                    {{#if description}}
-                        {{description}}
-                    {{/if}}
-                </p>
+<div class="container wrapper container--category">
+    <section class="tag-page">
+        <header class="tag-page__header flex flex-col-reverse">
+            <div class="tag-page__header-text flex flex-col items-center">
+                <h1 class="tag-page__title">{{name}}</h1>
+                <div class="tag-page__header-subtitle">
+                    <p class="tag-page__posts-amount">
+                        {{plural ../pagination.total empty='posts' singular='% post' plural='% posts'}}
+                    </p>
+                    <p class="tag-page__description">
+                        {{#if description}}
+                            {{description}}
+                        {{/if}}
+                    </p>
+                </div>
             </div>
-        </div>
-        {{#if feature_image}}
-            {{> image
-                image_type="tag"
-                image_class="lazyload"
-                image_url=feature_image
-                size_s=true
-                size_m=true
-                size_l=true
-                loading="lazy"
-            }}
-        {{/if}}
-    </header>
+            {{#if feature_image}}
+                {{> image
+                    image_type="tag"
+                    image_class="lazyload"
+                    image_url=feature_image
+                    size_s=true
+                    size_m=true
+                    size_l=true
+                    loading="lazy"
+                }}
+            {{/if}}
+        </header>
 
-    {{> post-cards-loop filter="tag:{{slug}}" classes="featured" cols="3" limit="all"}}
-</section>
+        {{> post-cards-loop filter="tag:{{slug}}" classes="featured" cols="3" limit="all"}}
+    </section>
+</div>
 
 {{/tag}}
 

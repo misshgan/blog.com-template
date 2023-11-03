@@ -1,0 +1,37 @@
+.tag-page {
+    padding-top: clamp(2rem, 1.629rem + 0.952vw, 3rem);
+
+    &__header {
+
+        picture img {
+            width: 100%;
+            height: clamp(16.6rem, 6.051rem + 27.048vw, 45rem);
+            object-fit: cover;
+            object-position: center;
+            border-radius: clamp(1.4rem, 1.177rem + 0.571vw, 2rem);
+        }
+
+        picture {
+            margin-bottom: clamp(2rem, 0.143rem + 4.762vw, 7rem);
+        }
+    }
+    &__header-text {
+        width: min(82rem, 100%);
+        margin: 0 auto;
+        text-align: center;
+        margin-bottom: clamp(4rem, 1.771rem + 5.714vw, 10rem);
+    }
+    &__header-subtitle {
+        font-size: clamp(1.6rem, 1.229rem + 0.952vw, 2.6rem);
+    }
+    &__title {
+        font-size: clamp(3.2rem, 2.531rem + 1.714vw, 5rem);
+        margin-bottom: clamp(0.6rem, 0.451rem + 0.381vw, 1rem);
+        font-weight: 500;
+    }
+    &__posts-amount {
+        margin-bottom: clamp(1rem, 0.629rem + 0.952vw, 2rem);
+    }
+    &__description {
+    }
+}
