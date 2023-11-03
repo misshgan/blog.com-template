@@ -50,6 +50,7 @@ production stylesheet in assets/built/screen.css using: npm run dev
 @import 'components/_tags';
 @import 'components/_cards';
 @import 'components/_footer';
+@import 'components/_breadcrumbds';
 
 /*========================================*/
 /* 7. Trumps 
