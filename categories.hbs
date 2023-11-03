@@ -1,6 +1,6 @@
 {{!< default}}
 
-<div class="container wrapper">
+<div class="container wrapper container--breadcrumbs">
     <aside>
         <nav class="breadcrumbs" aria-label="breadcrumbs">
             <ol class="flex items-center list--unstyled">
@@ -9,9 +9,11 @@
             </ol>
         </nav>
     </aside>
+</div>
 
+<div class="container wrapper container--categories">
     <section class="categories">
-        <h1 class="categories__title heading-1 mr-md-b">{{t "Categories"}}</h1>
-        {{> tags-loop classes="size-l categories__cards" categories=true}}
+        <h1 class="categories__title page-title">{{t "Categories"}}</h1>
+        {{> tags-loop categories=true}}
     </section>
 </div>

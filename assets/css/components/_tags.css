@@ -1,4 +1,5 @@
 .tags-loop {
+    margin-bottom: 0;
 }
 .tag-featured {
     background: rgba(255, 219, 89, 0.10);
@@ -44,5 +45,26 @@
 
     .tag-featured {
         padding: 0.75rem;
+    }
+}
+
+.tags-loop--categories {
+    
+    li {
+        width: 24%;
+
+        img {
+            width: 100%;
+            height: 18rem;
+            border-radius: clamp(1.4rem, 1.177rem + 0.571vw, 2rem);
+
+            object-fit: cover;
+            margin-bottom: 1rem;
+        }
+    }
+
+    .tag {
+        text-align: center;
+        margin: 0;
     }
 }

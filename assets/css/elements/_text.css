@@ -1,13 +1,10 @@
 /* Paragraph */
 p {
-  font-size: var(--font-size-base);
-  line-height: calc(0.1 + var(--line-height-base));
-  margin: 0 0 var(--gap-lg);
+  
 }
 
 /* Links */
 a {
-  color: var(--color-link);
   color: inherit;
   text-decoration: none;
   box-shadow: none;
