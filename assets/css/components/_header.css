@@ -12,6 +12,7 @@
 
     &__title {
         font-size: clamp(2.4rem, 1.673rem + 1.616vw, 4rem);
+        font-weight: 500;
     }
     &__logo {
         height: max(5rem, 4vw);
@@ -26,6 +27,7 @@
 
         li {
             font-size: 2rem;
+            font-weight: 400;
         }
 
         li:not(:last-child) {

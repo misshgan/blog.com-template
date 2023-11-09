@@ -12,15 +12,17 @@ production stylesheet in assets/built/screen.css using: npm run dev
 @import 'settings/_mq';
 
 /*========================================*/
-/* 2. Tools
-/*========================================*/
-@import 'tools/_mixins';
-
-/*========================================*/
 /* 3. Generic 
 /*========================================*/
 @import 'generic/_box-sizing';
 @import 'generic/_normalize';
+
+/*========================================*/
+/* 7. Trumps 
+/*========================================*/
+@import 'utilities/_animation';
+@import 'utilities/_flex';
+@import 'utilities/_states';
 
 /*========================================*/
 /* 4. Elements 
@@ -32,7 +34,6 @@ production stylesheet in assets/built/screen.css using: npm run dev
 @import 'elements/_image';
 @import 'elements/_input';
 @import 'elements/_list';
-@import 'elements/_misc';
 @import 'elements/_table';
 @import 'elements/_text';
 /*========================================*/
@@ -53,18 +54,7 @@ production stylesheet in assets/built/screen.css using: npm run dev
 @import 'components/_breadcrumbds';
 
 /*========================================*/
-/* 7. Trumps 
-/*========================================*/
-@import 'utilities/_animation';
-@import 'utilities/_color';
-@import 'utilities/_flex';
-@import 'utilities/_margin';
-@import 'utilities/_padding';
-@import 'utilities/_states';
-@import 'utilities/_text';
-@import 'utilities/_utilities';
-
-/*========================================*/
 /* 7. Pages 
 /*========================================*/
 @import 'pages/_category';
+@import 'pages/_post';

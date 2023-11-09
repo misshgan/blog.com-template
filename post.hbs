@@ -3,86 +3,89 @@
 
 {{#post}}
 
-<aside>
-    <nav class="breadcrumbs" aria-label="breadcrumbs">
-        <ol class="flex items-center">
-            <li><a class="link" href="{{@site.url}}">Home</a><span>{{> icons/arrow-right-thin}}</span></li>
-            <li><a class="link" href="{{@site.url}}/categories/">Categories</a><span>{{> icons/arrow-right-thin}}</span></li>
-            <li class="breadcrumbs__current"><a href="{{@site.url}}/{{slug}}/" aria-current="location">{{title}}</a></li>
-        </ol>
-    </nav>
-</aside>
+<div class="container wrapper container--breadcrumbs">
+    <aside>
+        <nav class="breadcrumbs" aria-label="breadcrumbs">
+            <ol class="flex items-center list--unstyled">
+                <li><a class="link" href="{{@site.url}}">Home</a><span>{{> icons/arrow-right-thin}}</span></li>
+                <li class="breadcrumbs__current"><a href="{{@site.url}}/categories/" aria-current="location">Categories</a></li>
+            </ol>
+        </nav>
+    </aside>
+</div>
 
-<article class="post {{post_class}}">
+<div class="wrapper container container--post">
+    <article class="post {{post_class}}">
 
-    <header class="gh-header gh-canvas">
+        <header class="post-header canvas">
 
-        {{> tags-loop classes="size-m gh-header__tags"}}
-        <h1 class="gh-title heading-1">{{title}}</h1>
+            {{> tags-loop classes="size-m post-header__tags"}}
+            <h1 class="post-header__title">{{title}}</h1>
 
-        {{#if custom_excerpt}}
-        <p class="gh-excerpt">{{custom_excerpt}}</p>
-        {{/if}}
-
-        {{> authors}}
-
-        {{#if feature_image}}
-        <figure class="gh-feature-image">
-            {{> image
-                image_type="post"
-                image_class="lazyload"
-                image_url=feature_image
-                size_l=true
-                size_m=true
-                loading="lazy"
-            }}
-            {{#if feature_image_caption}}
-                <figcaption>{{feature_image_caption}}</figcaption>
+            {{#if custom_excerpt}}
+            <p class="post-header__excerpt">{{custom_excerpt}}</p>
             {{/if}}
-        </figure>
-        {{/if}}
 
-    </header>
+            {{> authors}}
 
-    <div class="gh-content gh-canvas">
-        {{content}}
-    </div>
+            {{#if feature_image}}
+            <figure class="post-header__feature-image">
+                {{> image
+                    image_type="post"
+                    image_class="lazyload"
+                    image_url=feature_image
+                    size_l=true
+                    size_m=true
+                    loading="lazy"
+                }}
+                {{#if feature_image_caption}}
+                    <figcaption>{{feature_image_caption}}</figcaption>
+                {{/if}}
+            </figure>
+            {{/if}}
 
-    {{> cta classes="post" margin-bottom=true margin-top=true}}
+        </header>
 
-    <footer class="gh-footer gh-canvas">
+        <div class="post-content canvas">
+            {{content}}
+        </div>
 
-        {{#if comments}}
-        <section class="gh-post-comments">
-            {{comments}}
-        </section>
-        {{/if}}
+        {{> cta classes="post" margin-bottom=true margin-top=true}}
 
-    </footer>
+        <footer class="post-footer">
 
-</article>
-
-{{#get
-  'posts'
-  include='tags,authors'
-  limit='2'
-  filter='id:-{{id}}+tag:[{{primary_tag.slug}}]'
-}}
-
-  {{#if posts}}
-       <aside class="post-read-more">
-            <section class="cards-loop mr-big-b {{classes}}">
-                <h2 class="cards-loop__title mr-md-b heading-2">{{t "Read next"}}</h2>
-                
-                <ul class="cards-loop__cards flex">
-                    {{#foreach posts}}
-                        {{> post-card classes="width-half"}}
-                    {{/foreach}}
-                </ul>
+            {{#if comments}}
+            <section class="comments">
+                {{comments}}
             </section>
-        </aside>
-  {{/if}}
+            {{/if}}
 
-{{/get}}
+        </footer>
+
+    </article>
+
+    {{#get
+    'posts'
+    include='tags,authors'
+    limit='2'
+    filter='id:-{{id}}+tag:[{{primary_tag.slug}}]'
+    }}
+
+    {{#if posts}}
+        <aside class="post-read-more">
+                <section class="cards-loop{{classes}}">
+                    <h2 class="cards-loop__title">{{t "Read next"}}</h2>
+                    
+                    <ul class="cards-loop__cards flex list--unstyled">
+                        {{#foreach posts}}
+                            {{> post-card classes="width-half"}}
+                        {{/foreach}}
+                    </ul>
+                </section>
+            </aside>
+    {{/if}}
+
+    {{/get}}
+</div>
 
 {{/post}}

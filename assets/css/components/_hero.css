@@ -6,6 +6,7 @@
 
     &__title {
         font-size: clamp(3.4rem, 2.218rem + 2.626vw, 6rem);
+        font-weight: 400;
         width: min(84rem, 100%);
         margin: 0 0 2rem;
     }

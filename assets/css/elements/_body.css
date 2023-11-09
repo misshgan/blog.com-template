@@ -2,11 +2,8 @@
 html,
 body {
     font-size: var(--font-size-base);
-    font-weight: var(--font-weight-normal);
     font-family: var(--font-body);
-    line-height: var(--line-height-base);
-    letter-spacing: var(--letter-spacing);
-
+    
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     -webkit-txt-size-adjust: 100%;
@@ -17,9 +14,6 @@ body {
     hyphens: var(--global-hyphens);
 
     scroll-behavior: smooth;
-}
-
-main {
 }
 
 body {

@@ -1,0 +1,46 @@
+.post {
+    padding: clamp(2rem, 0.143rem + 4.762vw, 7rem) 0 0;
+
+    .post-header {
+        & > * {
+            grid-column: main;
+        }
+
+        &__title {
+            font-size: clamp(3.2rem, 2.717rem + 1.238vw, 4.5rem);
+            font-weight: 500;
+            margin-bottom: clamp(1.5rem, 1.314rem + 0.476vw, 2rem);
+        }
+        &__excerpt {
+        }
+        &__feature-image {
+            grid-column: full;
+        }
+    }
+    .post-content {
+
+        & > * {
+            grid-column: main;
+        }
+    }
+    .post-footer {
+    }
+    .comments {
+    }
+    .post-read-more {
+    }
+}
+
+.canvas {
+    --main: min(820px, 100%);
+    --wide: minmax(0, 310px);
+    --full: minmax(0, 10rem);
+
+    display: grid;
+    grid-template-columns:
+        [full-start] var(--full)
+        [wide-start] var(--wide)
+        [main-start] var(--main) [main-end]
+        var(--wide) [wide-end]
+        var(--full) [full-end];
+}
