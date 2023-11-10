@@ -10,11 +10,34 @@
             font-size: clamp(3.2rem, 2.717rem + 1.238vw, 4.5rem);
             font-weight: 500;
             margin-bottom: clamp(1.5rem, 1.314rem + 0.476vw, 2rem);
+            margin-top: clamp(1rem, 0.814rem + 0.476vw, 1.5rem);
         }
         &__excerpt {
+            font-size: clamp(1.8rem, 1.726rem + 0.19vw, 2rem);
+            font-weight: 400;
+            margin-bottom: clamp(2rem, 1.629rem + 0.952vw, 3rem);
+    
         }
         &__feature-image {
             grid-column: full;
+            margin-top: clamp(3rem, 1.514rem + 3.81vw, 7rem);
+            margin-bottom: clamp(5rem, 4.257rem + 1.905vw, 7rem);
+            
+            img {
+                border-radius: var(--global-radius);
+                height: clamp(16.6rem, 4.194rem + 31.81vw, 50rem);
+                width: 100%;
+                object-fit: cover;
+                object-position: center;
+            }
+
+            figcaption {
+                text-align: center;
+                margin-top: 1rem;
+                font-size: 1.6rem;
+                font-weight: 400;
+                color: var(--color-grey)
+            }
         }
     }
     .post-content {

@@ -1,0 +1,33 @@
+.authors {
+    &__avatar {
+        width: clamp(5rem, 4.629rem + 0.952vw, 6rem);
+        height: clamp(5rem, 4.629rem + 0.952vw, 6rem);
+        border-radius: 50%;
+        overflow: hidden;
+        margin-right: clamp(1rem, 0.814rem + 0.476vw, 1.5rem);
+
+        img {
+            object-fit: cover;
+            object-position: center;
+            width: 100%;
+            height: 100%;
+        }
+    }
+    &__info {
+    }
+    &__names {
+        font-size: clamp(1.6rem, 1.451rem + 0.381vw, 2rem);
+        font-weight: 400;
+        margin-bottom: 0.5rem;
+    }
+    &__meta {
+        font-size: clamp(1.6rem, 1.451rem + 0.381vw, 2rem);
+        font-weight: 300;
+    }
+}
+.flex {
+}
+.items-center {
+}
+.bull {
+}
