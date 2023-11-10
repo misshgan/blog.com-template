@@ -1,4 +1,4 @@
-.post {
+.post-page {
     padding: clamp(2rem, 0.143rem + 4.762vw, 7rem) 0 0;
 
     .post-header {
@@ -56,8 +56,8 @@
 
 .canvas {
     --main: min(820px, 100%);
-    --wide: minmax(0, 310px);
-    --full: minmax(0, 10rem);
+    --wide: minmax(0, 410px);
+    --full: minmax(0, 100%);
 
     display: grid;
     grid-template-columns:

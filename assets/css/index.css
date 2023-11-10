@@ -53,6 +53,7 @@ production stylesheet in assets/built/screen.css using: npm run dev
 @import 'components/_footer';
 @import 'components/_breadcrumbds';
 @import 'components/_authors';
+@import 'components/_post-content';
 
 /*========================================*/
 /* 7. Pages 
