@@ -1,0 +1,50 @@
+.login-page {
+    justify-content: center;
+    padding-top: clamp(2rem, -3.571rem + 14.286vw, 17rem);
+
+    &__feature-image {
+    }
+    &__text {
+
+        & > * {
+            text-align: center;
+        }
+    }
+    &__logo-text {
+        font-size: clamp(2.8rem, 2.577rem + 0.571vw, 3.4rem);
+        font-weight: 600;
+        display: inline-block;
+        margin-bottom: 7rem;
+    }
+    &__title {
+        font-size: clamp(2.6rem, 1.931rem + 1.714vw, 4.4rem);
+        font-weight: 500;
+        margin-bottom: clamp(1rem, 0.257rem + 1.905vw, 3rem);
+    }
+    &__info {
+    }
+}
+.has-image {
+}
+.sign-in-form {
+
+    &__input {
+        border-radius: var(--global-radius);
+        padding: 1.8rem 2rem;
+        background-color: var(--color-light-gray);
+        width: 100%;
+        font-size: clamp(1.6rem, 1.451rem + 0.381vw, 2rem);
+        font-weight: 300;
+        text-align: center;
+        margin-bottom: 2rem;
+        border: 1px solid transparent;
+        transition: all .2s;
+    }
+    &__input:active, &__input:focus, &__input:focus-visible {
+        outline: 0;
+        border-color: var(--color-full-black);
+    }
+    &__button {
+        margin-bottom: 3rem;
+    }
+}
