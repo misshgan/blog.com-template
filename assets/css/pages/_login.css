@@ -27,6 +27,9 @@
 .has-image {
 }
 .sign-in-form {
+    width: min(40rem, 100%);
+    margin-left: auto;
+    margin-right: auto;
 
     &__input {
         border-radius: var(--global-radius);
