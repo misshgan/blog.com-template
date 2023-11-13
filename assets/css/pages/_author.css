@@ -1,0 +1,45 @@
+.page-author {
+
+
+    &__info {
+        padding: clamp(2rem, 1.629rem + 0.952vw, 3rem) 0 clamp(4rem, 1.771rem + 5.714vw, 10rem);
+    }
+    &__name {
+        order: 2;
+
+        font-size: clamp(2.2rem, 1.903rem + 0.762vw, 3rem);
+        font-weight: 500;
+        margin-bottom: clamp(0.5rem, 0.314rem + 0.476vw, 1rem);
+    }
+    &__img {
+        order: 1;
+        margin-bottom: clamp(1rem, 0.629rem + 0.952vw, 2rem);
+
+        img {
+            width: clamp(10rem, 8.366rem + 4.19vw, 14.4rem);
+            height: clamp(10rem, 8.366rem + 4.19vw, 14.4rem);
+
+            object-fit: cover;
+            object-position: center;
+            border-radius: 50%;
+        }
+    }
+    &__bio {
+        order: 3;
+        width: min(42rem, 100%);
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        margin-bottom: clamp(1.5rem, 1.314rem + 0.476vw, 2rem);
+
+        font-size: clamp(1.6rem, 1.451rem + 0.381vw, 2rem);
+        font-weight: 400;
+    }
+    &__posts-amount {
+        order: 4;
+
+        font-size: clamp(1.6rem, 1.451rem + 0.381vw, 2rem);
+        font-weight: 500;
+        text-align: center;
+    }
+}

@@ -60,3 +60,4 @@ production stylesheet in assets/built/screen.css using: npm run dev
 /*========================================*/
 @import 'pages/_category';
 @import 'pages/_post';
+@import 'pages/_author';

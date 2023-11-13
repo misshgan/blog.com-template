@@ -1,6 +1,7 @@
 /* Paragraph */
 p {
   margin: 0;
+  color: var(--color-lighter-black);
   font-size: 1.8rem;
 }
 

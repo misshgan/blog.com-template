@@ -51,7 +51,11 @@
     }
 }
 
-.tags-loop--categories {
+.container--categories .tags-loop--categories {
+
+    flex-wrap: wrap;
+    column-gap: 1.33%;
+    row-gap: clamp(3rem, 1.514rem + 3.81vw, 7rem);
     
     li {
         width: 24%;

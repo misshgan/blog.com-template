@@ -6,7 +6,7 @@ h4,
 h5,
 h6 {
     font-family: var(--font-headings);
-    color: inherit;
+    color: var(--color-full-black);
     word-break: break-word;
     margin: 0;
 

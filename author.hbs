@@ -2,37 +2,41 @@
 
 {{#author}}
 
-<aside>
-    <nav class="breadcrumbs" aria-label="breadcrumbs">
-        <ol class="flex items-center">
-            <li><a class="link" href="{{@site.url}}">Home</a><span>{{> icons/arrow-right-thin}}</span></li>
-            <li class="breadcrumbs__current"><a href="{{@site.url}}/author/{{slug}}/" aria-current="location">{{name}}</a></li>
-        </ol>
-    </nav>
-</aside>
+<div class="container wrapper container--breadcrumbs">
+    <aside>
+        <nav class="breadcrumbs" aria-label="breadcrumbs">
+            <ol class="flex items-center list--unstyled">
+                <li><a class="link" href="{{@site.url}}">Home</a><span>{{> icons/arrow-right-thin}}</span></li>
+                <li class="breadcrumbs__current"><a href="{{@site.url}}/author/{{slug}}" aria-current="location">{{name}}</a></li>
+            </ol>
+        </nav>
+    </aside>
+</div>
 
-<section class="page-author__info flex flex-col items-center">
-    <h1 class="page-author__name heading-1">{{name}}</h1>
-    {{#if profile_image}}
-        <figure class="page-author__img">
-            {{> image
-                image_type="author"
-                image_class="lazyload"
-                image_url=profile_image
-                size_s=true
-                size_m=true
-                loading="lazy"
-            }}
-        </figure>
-    {{/if}}
-    <p class="page-author__bio">{{bio}}</p>
-    <p class="page-author__posts-amount">
-        {{plural ../pagination.total empty='posts' singular='% post' plural='% posts'}}
-    </p>
-</section>
+<div class="wrapper container">
+    <section class="page-author__info flex flex-col items-center">
+        <h1 class="page-author__name">{{name}}</h1>
+        {{#if profile_image}}
+            <figure class="page-author__img">
+                {{> image
+                    image_type="author"
+                    image_class="lazyload"
+                    image_url=profile_image
+                    size_s=true
+                    size_m=true
+                    loading="lazy"
+                }}
+            </figure>
+        {{/if}}
+        <p class="page-author__bio">{{bio}}</p>
+        <p class="page-author__posts-amount">
+            {{plural ../pagination.total empty='posts' singular='% post' plural='% posts'}}
+        </p>
+    </section>
 
 
 
-{{> post-cards-loop filter="author:{{slug}}" classes="author" cols="3" limit="all"}}
+    {{> post-cards-loop filter="author:{{slug}}" classes="author" cols="3" limit="all"}}
+</div>
         
 {{/author}}
