@@ -6,9 +6,9 @@
 <div class="container wrapper container--breadcrumbs">
     <aside>
         <nav class="breadcrumbs" aria-label="breadcrumbs">
-            <ol class="flex items-center list--unstyled">
+            <ol class="flex items-start list--unstyled">
                 <li><a class="link" href="{{@site.url}}">Home</a><span>{{> icons/arrow-right-thin}}</span></li>
-                <li class="breadcrumbs__current"><a href="{{@site.url}}/categories/" aria-current="location">Categories</a></li>
+                <li class="breadcrumbs__current"><a href="{{@site.url}}/{{title}}" aria-current="location">{{title}}</a></li>
             </ol>
         </nav>
     </aside>
