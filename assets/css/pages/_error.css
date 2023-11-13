@@ -1,0 +1,19 @@
+.error-page {
+    padding-top: 10rem;
+
+    & * > {
+        text-align: center;
+    }
+
+    &__title {
+        font-size: clamp(14.4rem, 10.463rem + 10.095vw, 25rem);
+        font-weight: 500;
+        margin-bottom: clamp(2rem, 1.257rem + 1.905vw, 4rem);
+        line-height: 0.75;
+    }
+    &__subtitle {
+        font-size: clamp(1.6rem, 1.303rem + 0.762vw, 2.4rem);
+        font-weight: 400;
+        margin-bottom: 5rem;
+    }
+}

@@ -4,32 +4,36 @@
 
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <link rel="stylesheet" href="{{asset "built/index.css"}}" />
     <script src="{{asset "built/index.js"}}" defer></script>
+
+    {{!-- Theme Settings --}}
+    {{> theme-settings}}
+
+    {{!-- Theme default font --}}
+    {{> fonts}}
 
     <title>{{meta_title}}</title>
 
     {{ghost_head}}
-    {{!-- Outputs important meta data and settings, should always be in <head> --}}
 
 </head>
 
 <body class="{{body_class}}">
-<div class="gh-viewport">
+{{> header}}
 
-    {{> header}}
+<main class="main">
 
-    <main class="gh-main">
+   <div class="wrapper container container--error">
+     <section class="error-page flex flex-col items-center">
+        <h1 class="error-page__title">{{statusCode}}</h1>
+        <p class="error-page__subtitle">{{message}}</p>
+        <a href="{{@site.url}}" class="btn">Back to homepage</a>
+    </section>
+   </div>
 
-        <section class="error-page flex flex-col items-center">
-            <h1 class="error-page__title">{{statusCode}}</h1>
-            <p class="error-page__subtitle">{{message}}</p>
-            <a href="{{@site.url}}" class="button">Back to homepage</a>
-        </section>
-
-    </main>
-
-</div>
+</main>
 
 {{!-- <foot> --}}
 {{ghost_foot}}
