@@ -12,15 +12,6 @@
     color: var(--color-white)
 }
 
-.tiers[data-plan-type="yearly"] {
-    .tier {
-
-        &__price-details {
-            margin-top: 1.2rem;
-        }
-    }
-}
-
 .tiers {
 
     &__price-toggles {
@@ -92,17 +83,21 @@
         border-radius: var(--global-radius);
         background-color: var(--color-brand);
         color: var(--color-brand-contrast);
+        margin-top: 1.2rem;
     }
     &__price-yearly {
     }
     &__discount {
         position: relative;
-        padding-left: 4.6rem;
+
+        &[data-discount='0'] {
+            display: none;
+            margin-top: 0;
+        }
 
         &::before {
-            position: absolute;
             content: attr(data-discount);
-            left: 1rem;
+            margin-right: 0.5rem;
         }
     }
     &__description {

@@ -1,0 +1,104 @@
+.account {
+    padding-top: clamp(4rem, 2.886rem + 2.857vw, 7rem);
+    padding-bottom: clamp(10rem, 7.4rem + 6.667vw, 17rem);
+
+    &__user-info {
+    }
+
+    &__plans {
+        margin-top: 4rem;
+    }
+
+    &__plans-title {
+        font-size: clamp(2rem, 1.777rem + 0.571vw, 2.6rem);
+        font-weight: 400;
+        text-align: center;
+        margin-bottom: 3rem;
+    }
+}
+
+.user-info {
+    margin-bottom: clamp(3rem, 2.629rem + 0.952vw, 4rem);
+
+    & > * {
+        text-align: center;
+    }
+
+    &__title {
+        font-size: clamp(2.2rem, 1.903rem + 0.762vw, 3rem);
+        font-weight: 500;
+        margin-bottom: clamp(0.5rem, 0.314rem + 0.476vw, 1rem);
+    }
+    &__subtitle {
+        font-size: clamp(1.6rem, 1.451rem + 0.381vw, 2rem);
+        font-weight: 400;
+        width: min(42rem, 100%);
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+.member-subscription {
+    width: min(65rem, 100%);
+    border-radius: var(--global-radius);
+    background-color: var(--color-light-gray);
+    padding: clamp(2.6rem, 2.08rem + 1.333vw, 4rem) clamp(2.4rem, 1.434rem + 2.476vw, 5rem);
+    margin-left: auto;
+    margin-right: auto;
+
+    row-gap: 2rem;
+    flex-wrap: wrap;
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        width: max-content;
+
+        &--full-width {
+            width: 100%;
+        }
+
+        &:nth-child(3), &:nth-child(5) {
+            margin-left: auto;
+            width: 30%;
+        }
+
+        label {
+            font-size: clamp(1.6rem, 1.451rem + 0.381vw, 2rem);
+            font-weight: 400;
+            margin-bottom: 0.3rem;
+            color: var(--color-dark-gray);
+        }
+
+        span {
+            font-size: clamp(1.8rem, 1.651rem + 0.381vw, 2.2rem);
+            font-weight: 500;
+            color: var(--color-lighter-black)
+        }
+    }
+
+    &__edit {
+        width: max-content;
+        margin-top: clamp(2rem, 1.257rem + 1.905vw, 4rem);
+        margin-left: auto;
+        margin-right: auto;
+        flex-wrap: wrap;
+        position: relative;
+
+        .gh-error-subscription-cancel {
+            position: absolute;
+            top: calc(100% + 2rem);
+            left: 50%;
+            transform: translateX(-50%);
+
+            font-size: clamp(1.6rem, 1.451rem + 0.381vw, 2rem);
+            font-weight: 300;
+            width: max-content;
+            color: var(--color-error)
+        }
+
+        .btn:first-child {
+            margin-right: 2rem;
+        }
+    }
+}

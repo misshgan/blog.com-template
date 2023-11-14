@@ -41,7 +41,7 @@
     }
     .post-content {
 
-        margin-top: clamp(5rem, 4.257rem + 1.905vw, 7rem);
+        margin: clamp(5rem, 4.257rem + 1.905vw, 7rem) 0 clamp(10rem, 7.4rem + 6.667vw, 17rem);
 
         & > * {
             grid-column: main;

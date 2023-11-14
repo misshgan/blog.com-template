@@ -24,8 +24,8 @@
                                     <span class="tier__billing-period">/{{t 'month'}}</span>
                                 </div>
                                 <div class="tier__price-details flex items-center">
-                                    {{#if trial-days}}
-                                        <span class="tier__trial-days">{{trial-days}} {{t 'days free'}}</span>
+                                    {{#if trial_days}}
+                                        <span class="tier__trial-days">{{trial_days}} {{t 'days free'}}</span>
                                     {{/if}}
                                 </div>
                             </div>
@@ -38,8 +38,8 @@
                                     <span class="tier__billing-period">/{{t 'year'}}</span>
                                 </div>
                                 <div class="tier__price-details flex items-center">
-                                    {{#if trial-days}}
-                                        <span class="tier__trial-days">{{trial-days}} {{t 'days free'}}</span>
+                                    {{#if trial_days}}
+                                        <span class="tier__trial-days">{{trial_days}} {{t 'days free'}}</span>
                                     {{/if}}
                                     <span class="tier__discount" data-discount="0" {{#if monthly_price}}data-monthly-price="{{price monthly_price}}"{{/if}} data-yearly-price="{{price yearly_price}}">{{t "discount"}}</span>
                                 </div>
@@ -87,3 +87,17 @@
     
 {{/if}}
 {{/get}}
+
+<script>
+    const onDataPlanSwitch = (value) => {
+    document.querySelector('.js-membership').setAttribute('data-plan-type', value);
+    };
+    document.querySelectorAll('[data-discount][data-monthly-price]').forEach(plan => {
+    const monthly = parseFloat(plan.getAttribute('data-monthly-price'));
+    const yearly = parseFloat(plan.getAttribute('data-yearly-price'));
+    const discount = Math.round(100 - parseInt((yearly/(12*monthly)) * 100));
+    if ( discount > 0 && discount < 100 ) {
+        plan.setAttribute('data-discount', `${discount}%`);
+    }
+    })
+</script>

@@ -1,0 +1,45 @@
+{{!< default}}
+
+<div class="container wrapper container--breadcrumbs">
+    <aside>
+        <nav class="breadcrumbs" aria-label="breadcrumbs">
+            <ol class="flex items-start list--unstyled">
+                <li><a href="{{@site.url}}">{{t 'Home'}}</a><span>{{> icons/arrow-right-thin}}</span></li>
+                <li class="breadcrumbs__current"><a href="{{@site.url}}/account/" aria-current="location">{{ t 'Account'}}</a></li>
+            </ol>
+        </nav>
+    </aside>
+</div>
+
+<section class="wrapper container account">
+    {{#if @member.paid}}
+        {{#foreach @member.subscriptions}}
+            {{!-- Show the member info --}}
+            {{#if @first}}
+            <div class="account__user-info user-info">
+                <h1 class="user-info__title">{{t 'Welcome back'}} {{@member.name}}</h1>
+                <p class="user-info__subtitle">You're currently on our paid plan, enjoying all the premium features. Thank you for choosing our premium services</p>
+            </div>
+            {{/if}}
+            
+            {{!-- Show the member subscription  --}}
+            {{> member-subscription}}
+        {{/foreach}}
+    {{else if @member}}
+        <div class="account__user-info user-info">
+            <h1 class="user-info__title">{{t 'Welcome back'}} {{@member.name}}</h1>
+            <p class="user-info__subtitle">You are currently on our free plan and enjoy free upgrades. To get the full range of features, upgrade to one of our premium</p>
+        </div>
+        
+        {{> member-subscription}}
+
+        <div class="account__plans">
+            <h3 class="account__plans-title">{{t 'Choose your subscription'}}</h3>
+            {{> member-tiers type="paid"}}
+        </div>
+
+    {{else}}
+        {{!-- Not logged in: Redirect to signin --}}
+        <script>window.location = '{{@site.url}}/sign-in/';</script>
+    {{/if}}
+</section>

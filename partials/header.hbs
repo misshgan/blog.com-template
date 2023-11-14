@@ -41,14 +41,9 @@
 
             {{!-- Member--}}
             {{#if member}}
-                {{#link href=@site.url class="header__user"}}
-                {{#if @member}}
-                    <img class="header__user-avatar" 
-                        src="{{@member.avatar_image}}"
-                        alt="{{@member.name}}">
-                    {{/if}}
-                    {{>icons/avatar}}
-                {{/link}}
+               <a href="{{@site.url}}/account/" class="header__user">
+                    {{> icon name='account'}}
+                </a>
             {{/if}}
         </div>
     </div>

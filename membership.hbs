@@ -34,19 +34,3 @@
     </div>
 
 {{/page}}
-
-
-
-<script>
-    const onDataPlanSwitch = (value) => {
-    document.querySelector('.js-membership').setAttribute('data-plan-type', value);
-    };
-    document.querySelectorAll('[data-discount][data-monthly-price]').forEach(plan => {
-    const monthly = parseFloat(plan.getAttribute('data-monthly-price'));
-    const yearly = parseFloat(plan.getAttribute('data-yearly-price'));
-    const discount = Math.round(100 - parseInt((yearly/(12*monthly)) * 100));
-    if ( discount > 0 && discount < 100 ) {
-        plan.setAttribute('data-discount', `${discount}%`);
-    }
-    })
-</script>

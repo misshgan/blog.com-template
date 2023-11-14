@@ -65,3 +65,4 @@ production stylesheet in assets/built/screen.css using: npm run dev
 @import 'pages/_login';
 @import 'pages/_error';
 @import 'pages/_membership';
+@import 'pages/_account';
