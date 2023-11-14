@@ -54,6 +54,7 @@ production stylesheet in assets/built/screen.css using: npm run dev
 @import 'components/_breadcrumbds';
 @import 'components/_authors';
 @import 'components/_post-content';
+@import 'components/_tiers';
 
 /*========================================*/
 /* 7. Pages 
@@ -63,3 +64,4 @@ production stylesheet in assets/built/screen.css using: npm run dev
 @import 'pages/_author';
 @import 'pages/_login';
 @import 'pages/_error';
+@import 'pages/_membership';

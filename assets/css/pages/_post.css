@@ -21,7 +21,6 @@
         &__feature-image {
             grid-column: full;
             margin-top: clamp(3rem, 1.514rem + 3.81vw, 7rem);
-            margin-bottom: clamp(5rem, 4.257rem + 1.905vw, 7rem);
             
             img {
                 border-radius: var(--global-radius);
@@ -41,6 +40,8 @@
         }
     }
     .post-content {
+
+        margin-top: clamp(5rem, 4.257rem + 1.905vw, 7rem);
 
         & > * {
             grid-column: main;

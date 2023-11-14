@@ -1,0 +1,42 @@
+{{!< default}}
+
+<div class="container wrapper container--breadcrumbs">
+    <aside>
+        <nav class="breadcrumbs" aria-label="breadcrumbs">
+            <ol class="flex items-start list--unstyled">
+                <li><a href="{{@site.url}}">Home</a><span>{{> icons/arrow-right-thin}}</span></li>
+                <li class="breadcrumbs__current"><a href="{{@site.url}}/membership" aria-current="location">{{t "Membership"}}</a></li>
+            </ol>
+        </nav>
+    </aside>
+</div>
+
+{{#page}}
+
+    <div class="wrapper container">
+        {{#if title}}
+            <h1 class="membership__title">{{title}}</h1>
+        {{else}}
+            <h1 class="membership__title">{{t "Membership"}}</h1>
+        {{/if}}
+
+        {{> member-tiers type="free,paid"}}
+    </div>
+
+{{/page}}
+
+
+
+<script>
+      const onDataPlanSwitch = (value) => {
+        document.querySelector('.js-membership').setAttribute('data-plan-type', value);
+      };
+      document.querySelectorAll('[data-discount][data-monthly-price]').forEach(plan => {
+        const monthly = parseFloat(plan.getAttribute('data-monthly-price'));
+        const yearly = parseFloat(plan.getAttribute('data-yearly-price'));
+        const discount = Math.round(100 - parseInt((yearly/(12*monthly)) * 100));
+        if ( discount > 0 && discount < 100 ) {
+          plan.setAttribute('data-discount', `${discount}%`);
+        }
+      })
+    </script>
