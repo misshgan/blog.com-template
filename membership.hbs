@@ -13,14 +13,24 @@
 
 {{#page}}
 
-    <div class="wrapper container">
+    <div class="wrapper container membership">
         {{#if title}}
             <h1 class="membership__title">{{title}}</h1>
         {{else}}
             <h1 class="membership__title">{{t "Membership"}}</h1>
         {{/if}}
 
-        {{> member-tiers type="free,paid"}}
+        
+        {{#if @member.paid}}
+            <script>window.location = '{{@site.url}}/account/';</script>
+        {{else if @member}}
+            {{!-- For free member show paid plans only --}}
+            {{> member-tiers type="paid"}}
+        {{else}}
+            {{!-- Show all plans --}}
+            {{> member-tiers type="free,paid"}}
+        {{/if}}
+        
     </div>
 
 {{/page}}
@@ -28,15 +38,15 @@
 
 
 <script>
-      const onDataPlanSwitch = (value) => {
-        document.querySelector('.js-membership').setAttribute('data-plan-type', value);
-      };
-      document.querySelectorAll('[data-discount][data-monthly-price]').forEach(plan => {
-        const monthly = parseFloat(plan.getAttribute('data-monthly-price'));
-        const yearly = parseFloat(plan.getAttribute('data-yearly-price'));
-        const discount = Math.round(100 - parseInt((yearly/(12*monthly)) * 100));
-        if ( discount > 0 && discount < 100 ) {
-          plan.setAttribute('data-discount', `${discount}%`);
-        }
-      })
-    </script>
+    const onDataPlanSwitch = (value) => {
+    document.querySelector('.js-membership').setAttribute('data-plan-type', value);
+    };
+    document.querySelectorAll('[data-discount][data-monthly-price]').forEach(plan => {
+    const monthly = parseFloat(plan.getAttribute('data-monthly-price'));
+    const yearly = parseFloat(plan.getAttribute('data-yearly-price'));
+    const discount = Math.round(100 - parseInt((yearly/(12*monthly)) * 100));
+    if ( discount > 0 && discount < 100 ) {
+        plan.setAttribute('data-discount', `${discount}%`);
+    }
+    })
+</script>
