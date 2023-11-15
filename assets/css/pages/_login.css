@@ -55,6 +55,62 @@
     }
     &__button {
         margin-bottom: 3rem;
+        transition: all .3s;
+    }
+}
+
+.sign-in-form.success {
+
+    .sign-in-form__button {
+        margin-top: 2rem;
+    }
+
+    .msg-success {
+        animation-name: fadeIn;
+        max-height: max-content;
+    }
+}
+
+.sign-in-form.error {
+
+    .sign-in-form__button {
+        margin-top: 2rem;
+    }
+
+    .msg-error {
+        animation-name: fadeIn;
+        max-height: max-content;
+    }
+}
+
+.sign-in-form.loading {
+
+    .sign-in-form__button {
+        position: relative;
+        cursor: not-allowed;
+
+        background-color: var(--color-grey-darker);
+        border-color: var(--color-grey-darker);
+        color: transparent;
+
+        &::after {
+            position: absolute;
+            content: '';
+            width: 3rem;
+            height: 3rem;
+            top: calc(50% - 1.5rem);
+            right: calc(50% - 1.5rem);
+            border-radius: 50%;
+            background-image: url(/assets/images/loading.svg);
+            background-position: center;
+            background-size: cover;
+
+            animation-name: rotation;
+            animation-duration: 1s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+            transition: all .4s;
+        }
     }
 }
 

@@ -38,9 +38,23 @@ button {
     display: block;
     width: max-content;
     border: 1px solid var(--color-full-black);
+    overflow: hidden;
 
     &--transparent {
         background-color: var(--color-transparent);
         color: var(--color-full-black);
+    }
+
+    &__text, &__loading-text {
+        transition: all .3s;
+    }
+
+    &__text {
+        display: inline-block;
+    }
+
+    &__loading-text {
+        position: absolute;
+        transform: translate(-155%, 150%);
     }
 }

@@ -36,6 +36,7 @@ production stylesheet in assets/built/screen.css using: npm run dev
 @import 'elements/_list';
 @import 'elements/_table';
 @import 'elements/_text';
+@import 'elements/_messages';
 /*========================================*/
 /* 5. Objects 
 /*========================================*/

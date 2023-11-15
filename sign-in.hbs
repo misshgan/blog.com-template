@@ -30,8 +30,10 @@
                     {{/if}}
                 {{/link}}
                 <h1 class="login-page__title heading-1">{{t "Sign in to"}} {{@site.title}}</h1>
-                <form action="#" class="sign-in-form flex {{^if feature_image}} items-center {{/if}} flex-col">
-                    <input class="sign-in-form__input" placeholder="Your e-mail@gmail.com" type="email">
+                <form action="#" class="sign-in-form flex {{^if feature_image}} items-center {{/if}} flex-col" data-members-form="signin">
+                    <input data-members-email class="sign-in-form__input" placeholder="Your e-mail@gmail.com" type="email">
+                    <div class="msg-success animate">{{t "Great! Check your inbox and click the link."}}</div>
+                    <div data-members-error class="msg-error animate"></div>
                     <button class="sign-in-form__button btn">{{t "Send login link"}}</button>
                 </form>
                 <p class="login-page__info">{{t "Don’t have an account yet? "}} <a class="link" href="{{@site.url}}/sign-up/">{{t "Sign up"}}</a></p>

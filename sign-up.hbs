@@ -31,9 +31,9 @@
                     {{/if}}
                 {{/link}}
                 <h1 class="login-page__title heading-1">{{t "Get started with"}} {{@site.title}}</h1>
-                <form action="#" class="sign-in-form flex {{^if feature_image}} items-center {{/if}} flex-col">
-                    <input class="sign-in-form__input" placeholder="Your name" type="name">
-                    <input class="sign-in-form__input" placeholder="Your e-mail@gmail.com" type="email">
+                <form class="sign-in-form flex {{^if feature_image}} items-center {{/if}} flex-col" data-members-form="signup">
+                    <input data-members-name class="sign-in-form__input" placeholder="Your name" type="name">
+                    <input data-members-email class="sign-in-form__input" placeholder="Your e-mail@gmail.com" type="email">
                     <button class="sign-in-form__button btn">{{t "Send sign-up link"}}</button>
                 </form>
                 <p class="login-page__info">{{t "Already have an account? "}} <a class="link" href="{{@site.url}}/sign-in/">{{t "Sign in"}}</a></p>

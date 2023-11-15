@@ -1,0 +1,16 @@
+.msg-success, .msg-error {
+    font-size: clamp(1.6rem, 1.457rem + 0.238vw, 1.8rem);
+    font-weight: 400;
+    overflow: hidden;
+    max-height: 0;
+    opacity: 0;
+}
+
+.msg-success {
+    color: var(--color-success);
+}
+
+.msg-error {
+    color: var(--color-error);
+}
+
