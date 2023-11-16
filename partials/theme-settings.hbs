@@ -7,19 +7,11 @@
     --global-radius: clamp(1.4rem, 1.177rem + 0.571vw, 2rem); /* default radius */
     --global-gallery-gap: 20px; /* Image gallery distance between images */
     --global-hyphens: none; /* none/auto */
-   /* --global-theme-notifications: visible;
-    --global-progress-bar: visible; 
-    --global-content-preview-fading: 0%;
-    --global-hero-img-filter: {{@custom.hero_image_filter}};
-    --global-scroll-behavior: auto; */
   }
 </style>
 
 {{!-- User Theme Handling & Globals --}}
 <script>
-  /*  let preferredTheme = localStorage.getItem('PREFERRED_COLOR_SCHEME') || `{{@custom.color_scheme}}`;
-  document.documentElement.setAttribute('data-color-scheme', preferredTheme); */
-  
   // Global values needed
   const themeGlobal = {
     currentPage: parseInt('{{pagination.page}}'),
@@ -30,7 +22,6 @@
     postsPerPage: parseInt('{{@config.posts_per_page}}'),
     totalPosts: parseInt('{{pagination.total}}'), 
     scrollPos: 0,
-    imageLightbox: `{{@custom.image_lightbox}}` === `true` ? true : false
   }
 
   // Calculate contrast & HSL value;

@@ -16,34 +16,36 @@
 <div class="wrapper container container--post">
     <article class="post-page {{post_class}}">
 
-        <header class="post-header canvas">
+        {{#if @page.show_title_and_feature_image}}
+            <header class="post-header canvas">
 
-            {{> tags-loop classes="size-m post-header__tags"}}
-            <h1 class="post-header__title">{{title}}</h1>
+                {{> tags-loop classes="size-m post-header__tags"}}
+                <h1 class="post-header__title">{{title}}</h1>
 
-            {{#if custom_excerpt}}
-            <p class="post-header__excerpt">{{custom_excerpt}}</p>
-            {{/if}}
-
-            {{> authors}}
-
-            {{#if feature_image}}
-            <figure class="post-header__feature-image">
-                {{> image
-                    image_type="post"
-                    image_class="lazyload"
-                    image_url=feature_image
-                    size_l=true
-                    size_m=true
-                    loading="lazy"
-                }}
-                {{#if feature_image_caption}}
-                    <figcaption>{{feature_image_caption}}</figcaption>
+                {{#if custom_excerpt}}
+                <p class="post-header__excerpt">{{custom_excerpt}}</p>
                 {{/if}}
-            </figure>
-            {{/if}}
 
-        </header>
+                {{> authors}}
+
+                {{#if feature_image}}
+                <figure class="post-header__feature-image">
+                    {{> image
+                        image_type="post"
+                        image_class="lazyload"
+                        image_url=feature_image
+                        size_l=true
+                        size_m=true
+                        loading="lazy"
+                    }}
+                    {{#if feature_image_caption}}
+                        <figcaption>{{feature_image_caption}}</figcaption>
+                    {{/if}}
+                </figure>
+                {{/if}}
+
+            </header>
+        {{/if}}
 
         <div class="post-content canvas">
             {{content}}
