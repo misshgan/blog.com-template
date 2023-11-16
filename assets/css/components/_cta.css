@@ -44,6 +44,7 @@
         max-width: min(93.5rem, 100%);
     }
     &__form {
+        position: relative;
     }
     &__form-input {
         font-size: clamp(1.6rem, 1.418rem + 0.404vw, 2rem);
