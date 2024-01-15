@@ -9,8 +9,10 @@
             <ol class="flex items-start list--unstyled">
                 <li><a href="{{@site.url}}">Home</a><span>{{> icons/arrow-right-thin}}</span></li>
                 <li><a href="{{@site.url}}/categories">Categories</a><span>{{> icons/arrow-right-thin}}</span></li>
-                <li><a href="{{@site.url}}/tag/{{primary_tag.slug}}">{{primary_tag.name}}</a><span>{{> icons/arrow-right-thin}}</span></li>
-                <li class="breadcrumbs__current"><a href="{{@site.url}}/{{title}}" aria-current="location">{{title}}</a></li>
+                {{#if primary_tag}}
+                    <li><a href="{{@site.url}}/tag/{{primary_tag.slug}}">{{primary_tag.name}}</a><span>{{> icons/arrow-right-thin}}</span></li>
+                {{/if}}
+                <li class="breadcrumbs__current"><a aria-current="location">{{title}}</a></li>
             </ol>
         </nav>
     </aside>

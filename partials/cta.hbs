@@ -8,7 +8,7 @@
         <form class="cta__form flex {{^match classes '=' 'cta--footer'}} items-center {{/match}} flex-col" data-members-form="signup">
             <div class="flex {{^match classes '=' 'cta--footer'}} items-center {{/match}}">
                 <input data-members-email class="cta__form-input" placeholder="Your e-mail@gmail.com" type="email">
-                <button class="cta__form-button btn">{{@custom.cta_section_button_text}}</button>
+                <button class="cta__form-button btn btn--cta {{^match classes '=' 'cta--footer'}} btn--cta-footer {{/match}}">{{@custom.cta_section_button_text}}</button>
             </div>
             <div class="cta__messages">
                 <div class="msg-success animate">{{t "Great! Check your inbox and click the link."}}</div>

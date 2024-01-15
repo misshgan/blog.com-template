@@ -23,12 +23,16 @@
         &__img {
             border-radius: var(--global-radius);
             overflow: hidden;
-    
+        
             img {
                 height: 100%;
                 width: 100%;
                 object-fit: cover;
             }
+        }
+
+        &__img:hover img {
+            transform: scale(1.1);
         }
 
         &__reading-time {
@@ -51,6 +55,9 @@
             font-size: clamp(2.6rem, 2.236rem + 0.808vw, 3.4rem);
             font-weight: 500;       
             margin: 2rem 0 1rem;
+        }
+        &__title:hover {
+            text-decoration: underline;
         }
         &__excerpt {
             font-size: clamp(1.8rem, 1.527rem + 0.606vw, 2.4rem);

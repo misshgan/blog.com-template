@@ -8,6 +8,10 @@
             margin-left: 1.5rem;
         }
 
+        a:not(:last-child):hover {
+            text-decoration: underline;
+        }
+
         &:not(:last-child) {
             margin-right: 1.5rem;
             min-width: max-content;

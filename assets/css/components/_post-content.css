@@ -198,6 +198,13 @@
             border: none;
             border-radius: var(--global-radius);
             background-color: var(--color-light-gray);
+            transition: all .3s;
+        }
+
+        .kg-bookmark-container:hover {
+            border-radius: var(--global-radius);
+            border: none;
+            transform: translateY(-5px);
         }
 
         .kg-bookmark-content {
