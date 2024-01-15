@@ -8,6 +8,10 @@
         color: var(--color-grey)
     }
 
+    & > *:first-child {
+        margin-top: 0;
+    }
+
     & > * {
         color: var(--color-lighter-black);
         font-size: 1.8rem;
@@ -194,6 +198,12 @@
 
     .kg-bookmark-card {
 
+        .kg-bookmark-thumbnail {
+            @media (max-width:600px) {
+                display: none;
+            }
+        }
+
         .kg-bookmark-container {
             border: none;
             border-radius: var(--global-radius);
@@ -376,6 +386,10 @@
 
     .kg-width-full .kg-signup-card-text {
         padding: min(12vmax,260px);
+
+        @media (max-width:600px) {
+            padding: min(6.4vmax,120px) min(4vmax,80px);
+        }
     }
 
     .kg-signup-card-form {
@@ -383,6 +397,10 @@
         overflow: hidden;
         width: max-content;
         font-family: var(--font-default);
+
+        @media (max-width:600px) {
+            width: 100%;
+        }
     }
 
     .kg-signup-card-fields {
