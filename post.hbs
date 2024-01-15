@@ -51,20 +51,21 @@
         </header>
 
         <div class="post-content canvas">
-            {{content}}
-        </div>
-
-        {{> cta classes="post" margin-bottom=true margin-top=true}}
-
-        <footer class="post-footer">
-
-            {{#if comments}}
-            <section class="comments">
-                {{comments}}
-            </section>
+            {{#if access}}
+                {{content}}
+            {{else}}
+                <div class="post-sneak-peek fading">
+                    {{{html}}}
+                </div>
+               {{> cta classes="post--preview" is_post_preview=true}}
             {{/if}}
 
-        </footer>
+             {{#if comments}}
+                <section class="comments">
+                    {{comments}}
+                </section>
+            {{/if}}
+        </div>
 
     </article>
 
