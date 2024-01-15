@@ -32,7 +32,8 @@
         transition: all .2s;
     }
     &__cards {
-        column-gap: 2rem;
+        gap: 3rem;
+        flex-wrap: wrap;
     }
     &__card {
     }

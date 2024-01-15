@@ -49,18 +49,28 @@
     row-gap: 2rem;
     flex-wrap: wrap;
 
+    @media (max-width:500px) {
+        flex-direction: column;
+    }
+
     &__item {
         display: flex;
         flex-direction: column;
         width: max-content;
+        width: 50%;
 
         &--full-width {
             width: 100%;
         }
 
         &:nth-child(3), &:nth-child(5) {
-            margin-left: auto;
-            width: 30%;
+           width: 35%;
+           margin-left: auto;
+
+           @media (max-width:500px) {
+                margin-left: 0;
+                width: 100%;
+            }
         }
 
         label {
@@ -85,6 +95,10 @@
         flex-wrap: wrap;
         position: relative;
 
+        @media (max-width:500px) {
+            flex-direction: column;
+        }
+
         .gh-error-subscription-cancel {
             position: absolute;
             top: calc(100% + 2rem);
@@ -99,6 +113,18 @@
 
         .btn:first-child {
             margin-right: 2rem;
+
+            @media (max-width:500px) {
+                margin-right: 0;
+                margin-bottom: 1rem;
+            }
+        }
+
+        .btn {
+            @media (max-width:500px) {
+                width: 100%;
+                text-align: center;
+            }
         }
     }
 }
