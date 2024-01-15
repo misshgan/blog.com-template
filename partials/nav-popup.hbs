@@ -1,0 +1,34 @@
+<div id="nav-popup" class="nav-popup">
+    <nav class="flex flex-col items-center">
+        {{navigation classes="flex flex-col items-center"}}
+
+        {{^if @member}}
+            <div class="flex flex-col nav-popup-buttons">
+                <a href="/sign-in/" class="btn signin-link header-button">{{t "Sign in"}}</a>
+                <a href="/sign-up/" class="btn btn--transparent signin-link header-button">{{t "Sign up"}}</a>
+            </div>
+        {{else}}
+            <div class="flex flex-col nav-popup-buttons">
+                <a href="/account/" class="signin-link header-button flex items-center content-center">{{t "Account"}}</a>
+            </div>
+        {{/if}}
+    </nav>
+</div>
+
+<script>
+    function handleMobileMenu() {
+        const navMenuTarget = document.querySelector('.header-mobile-nav');
+
+        if (navMenuTarget) {
+            const navMenu = document.querySelector('#nav-popup');
+
+            navMenuTarget.addEventListener('click', function() {
+                navMenu.classList.toggle('active')
+                navMenuTarget.classList.toggle('active')
+                document.body.classList.toggle('no-scroll')
+            })
+        }
+    }
+
+    handleMobileMenu();
+</script>

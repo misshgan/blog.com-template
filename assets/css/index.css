@@ -56,6 +56,7 @@ production stylesheet in assets/built/screen.css using: npm run dev
 @import 'components/_authors';
 @import 'components/_post-content';
 @import 'components/_tiers';
+@import 'components/_popup';
 
 /*========================================*/
 /* 7. Pages 

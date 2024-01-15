@@ -1,14 +1,15 @@
 <article class="big-img-cta {{classes}}">
-    {{#if @member}}
-        <div class="big-img-cta__img big-img-cta__img--member">
-            {{> image
-                image_type="site"
-                image_class="lazyload"
-                image_url=@custom.hero_cta_background_image
-                size_l=true
-                loading="lazy"
-            }}
-        </div>
+    <div class="big-img-cta__img big-img-cta__img--member">
+        {{> image
+            image_type="site"
+            image_class="lazyload"
+            image_url=@custom.hero_cta_background_image
+            size_l=true
+            loading="lazy"
+        }}
+    </div>
+    {{!-- {{#if @member}}
+        
     {{else}}
         <a href="{{@site.url}}/sign-up" class="btn big-img-cta__link">{{t "Subscribe"}}</a>
         <div class="big-img-cta__img">
@@ -20,6 +21,7 @@
                     </pattern>
                 </defs>
             </svg>
+
         </div>
-    {{/if}}
+    {{/if}} --}}
 </article>

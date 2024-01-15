@@ -8,7 +8,7 @@
     }
     &__cards {
         column-gap: 2%;
-        row-gap: clamp(4rem, 1.273rem + 6.061vw, 10rem);
+        row-gap: clamp(3rem, -2.488rem + 12.195vw, 10rem);
         margin: 0;
         flex-wrap: wrap;
     }
@@ -20,6 +20,12 @@
 
     .post-card {
 
+        @media (max-width:600px) {
+            padding: 2rem;
+            background-color: #f5f5f57f;
+            border-radius: var(--global-radius);
+        }
+
         &__img {
             border-radius: var(--global-radius);
             overflow: hidden;
@@ -28,6 +34,12 @@
                 height: 100%;
                 width: 100%;
                 object-fit: cover;
+            }
+        }
+
+        &__excerpt {
+            @media (max-width:600px) {
+                display: none;
             }
         }
 
@@ -45,6 +57,10 @@
 .post-card-wrapper.width-half {
     width: 49%;
 
+    @media (max-width:600px) {
+        width: 100%;
+    }
+
     .post-card {
 
         &__img {
@@ -54,7 +70,7 @@
         &__title {
             font-size: clamp(2.6rem, 2.236rem + 0.808vw, 3.4rem);
             font-weight: 500;       
-            margin: 2rem 0 1rem;
+            margin: clamp(1.5rem, 1.108rem + 0.871vw, 2rem) 0 1rem;
         }
         &__title:hover {
             text-decoration: underline;
@@ -73,6 +89,14 @@
 
 .post-card-wrapper.width-third {
     width: 32%;
+
+    @media (max-width:768px) {
+        width: 49%;
+    }
+
+    @media (max-width:600px) {
+        width: 100%;
+    }
 
     .post-card {
 

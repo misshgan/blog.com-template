@@ -30,20 +30,20 @@
 
             {{!-- Sign in Button --}}
             {{#if @site.members_enabled}}
-            {{#if @member.paid}}
-            {{else if @member}}
-                {{!-- nothing --}}
-            {{else}}
-                <a href="/sign-in/" class="btn signin-link">{{t "Sign in"}}</a>
-            {{/if}}
+                {{#if @member}}
+                    <a href="{{@site.url}}/account/" class="header__user header-button">
+                        {{> icon name='account'}}
+                    </a>
+                {{else}}
+                    <a href="/sign-in/" class="btn signin-link header-button">{{t "Sign in"}}</a>
+                {{/if}}
             {{/if}}
 
-            {{!-- Member--}}
-            {{#if member}}
-               <a href="{{@site.url}}/account/" class="header__user">
-                    {{> icon name='account'}}
-                </a>
-            {{/if}}
+            <div class="header-mobile-nav">
+                {{> icons/menu}}
+                {{> icons/close}}
+            </div>
+
         </div>
     </div>
 </header>

@@ -32,6 +32,10 @@
         justify-self: center;
         margin: 0 auto;
 
+        @media (max-width:780px) {
+            margin: 3rem auto 3rem 0;
+        }
+
         ul {
             list-style-type: none;
             padding-left: 0;

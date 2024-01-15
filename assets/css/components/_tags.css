@@ -21,7 +21,7 @@
 }
 
 .tags-loop.size-l {
-    gap: 2rem;
+    gap: clamp(1rem, 0.216rem + 1.742vw, 2rem);
     
     .tag {
         padding: 1.2rem 2rem;
