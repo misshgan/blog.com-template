@@ -3,6 +3,7 @@
 
     .post-sneak-peek.fading {
         position: relative;
+        margin: 0;
 
         &::after {
             position: absolute;
