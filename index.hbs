@@ -3,7 +3,11 @@
 <div class="container wrapper container--home">
     {{> home/hero}}
 
-    {{> post-cards-loop filter="featured:true" classes="featured" title="Featured" cols="2" limit="3"}}
+    {{#get "posts" filter='featured:true' as | featured |}}
+        {{#if featured}}
+            {{> post-cards-loop filter="featured:true" classes="featured" title="Featured" cols="2" limit="4"}}
+        {{/if}}
+    {{/get}}
 
     {{#if @custom.enter_tag_to_display_publications_on_the_home_page}}
         {{#get "tags" filter="slug:[{{@custom.enter_tag_to_display_publications_on_the_home_page}}]"}}
