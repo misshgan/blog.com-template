@@ -124,6 +124,10 @@
         width: 49.19%;
         height: 71.5rem;
 
+        @media (max-width:768px) {
+            display: none;
+        }
+
         img {
             border-radius: var(--global-radius);
             width: 100%;
@@ -136,6 +140,11 @@
     .login-page__text {
         margin-left: 5rem;
 
+        @media (max-width:768px) {
+            margin: 0 auto;
+            align-items: center;
+        }
+
         & > * {
             text-align: start;
         }
@@ -143,6 +152,12 @@
 
     .sign-in-form  {
         margin: 0;
+
+        .btn {
+            @media (max-width:768px) {
+                width: 100%;
+            }
+        }
 
         &__input {
             text-align: start;
